@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cv0sxonw8alhs"
+path="res://.godot/imported/teststory.dialogue-80c0986c24d83076e140f92bdbbb5065.tres"
+
+[deps]
+
+source_file="res://Stories/teststory.dialogue"
+dest_files=["res://.godot/imported/teststory.dialogue-80c0986c24d83076e140f92bdbbb5065.tres"]
+
+[params]
+
+defaults=true
