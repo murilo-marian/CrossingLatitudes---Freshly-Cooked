@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ycdi6x5pb2q"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/object/object_parent.tscn" id="1_bp75r"]
+[ext_resource type="Texture2D" uid="uid://dodsyvgi73m1b" path="res://graphics/object/Apple.png" id="2_js24b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbo7r"]
+radius = 40.05
+
+[node name="ObjectParent" instance=ExtResource("1_bp75r")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_js24b")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_pbo7r")
