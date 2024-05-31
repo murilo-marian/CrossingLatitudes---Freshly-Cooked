@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cds1loia75f7p"]
+[gd_scene load_steps=8 format=3 uid="uid://cds1loia75f7p"]
 
 [ext_resource type="Script" path="res://scenes/player/ant_parent.gd" id="1_xah5v"]
 [ext_resource type="Texture2D" uid="uid://lvay1g8pkukb" path="res://graphics/player/ant_moving_animation.png" id="2_gev22"]
@@ -44,6 +44,9 @@ _data = {
 "walk": SubResource("Animation_b2jd5")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xfpw"]
+size = Vector2(29, 18)
+
 [node name="AntParent" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_xah5v")
@@ -63,3 +66,9 @@ libraries = {
 "": SubResource("AnimationLibrary_vyxro")
 }
 autoplay = "walk"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_5xfpw")

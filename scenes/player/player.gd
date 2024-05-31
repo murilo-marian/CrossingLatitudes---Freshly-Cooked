@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 signal spawnAnt()
-const SPEED = 110.0
+signal circleFormed(area)
+const SPEED = 100.0
 
 
 func _physics_process(_delta):	
@@ -15,3 +16,9 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		spawnAnt.emit()
+		
+
+
+
+func _on_area_2d_area_entered(area):
+	circleFormed.emit(area)

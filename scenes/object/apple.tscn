@@ -13,3 +13,7 @@ texture = ExtResource("2_js24b")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CircleShape2D_pbo7r")
+
+[node name="CPUParticles2D" parent="." index="2"]
+initial_velocity_min = 402.78
+initial_velocity_max = 555.56
