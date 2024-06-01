@@ -36,3 +36,17 @@ func _on_eating_area_body_entered(body):
 	if body.has_method("get_eaten"):
 		print(body)
 		body.get_eaten()
+
+func change_player():
+	if $followers.get_child_count() == 0: #TODO change later to game over screen and stuff
+		return
+
+	var first_follower = $followers.get_child(0)
+	$player.global_position = first_follower.global_position
+	if $followers.get_child_count() > 1:
+		$followers.get_child(1).target_path = "../../player"
+		$followers.get_child(1).update_target()
+	first_follower.queue_free()
+
+func _on_player_kill_ant():
+	change_player()

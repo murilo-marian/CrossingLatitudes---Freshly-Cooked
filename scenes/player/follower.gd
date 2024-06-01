@@ -1,10 +1,8 @@
 extends CharacterBody2D
 
 @onready var target = get_node(target_path) #target = who the ant is following
-
-const SPEED = 110.0
-
 @export var target_path : NodePath
+const SPEED = 110.0
 
 func _ready():
 	pass
@@ -19,3 +17,6 @@ func _physics_process(_delta):
 			elif velocity != Vector2.ZERO:
 				velocity = velocity.lerp(Vector2.ZERO, 0.1)
 	move_and_slide()
+	
+func update_target():
+	target = get_node(target_path)

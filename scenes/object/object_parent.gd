@@ -11,5 +11,8 @@ func _process(_delta):
 	pass
 
 func get_eaten():
+	$CPUParticles2D.emitting = true
+	$Timer.start()
 	
+func _on_timer_timeout():
 	queue_free()
