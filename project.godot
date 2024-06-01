@@ -27,6 +27,8 @@ debug_kill_ant={
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="object"
+2d_physics/layer_3="crumbs"
+2d_physics/layer_4="followers"
 2d_physics/layer_5="eatingArea"
 
 [rendering]

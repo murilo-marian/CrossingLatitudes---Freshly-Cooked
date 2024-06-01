@@ -32,9 +32,8 @@ func on_ant_circle(area):
 func _on_player_circle_formed(area):
 	on_ant_circle(area)
 
-func _on_eating_area_body_entered(body):
+func _on_eating_area_body_entered(body): #add points for food later
 	if body.has_method("get_eaten"):
-		print(body)
 		body.get_eaten()
 
 func change_player():
@@ -50,3 +49,7 @@ func change_player():
 
 func _on_player_kill_ant():
 	change_player()
+	
+	
+func _on_player_crumb_entered(area): #add points for food later
+	area.queue_free()

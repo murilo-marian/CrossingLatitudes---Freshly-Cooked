@@ -1,5 +1,156 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlwce2w6ln3rt"]
+[gd_scene load_steps=11 format=3 uid="uid://dlwce2w6ln3rt"]
 
 [ext_resource type="PackedScene" uid="uid://bjm4x3xxknjg0" path="res://scenes/level/level_parent.tscn" id="1_rj47a"]
+[ext_resource type="PackedScene" uid="uid://ce5ht4fpkgwb2" path="res://scenes/objects/plate.tscn" id="2_mxc25"]
+[ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/food/apple.tscn" id="3_hpqvu"]
+[ext_resource type="PackedScene" uid="uid://c2pnaokoalxcw" path="res://scenes/food/cherry.tscn" id="4_b5u5q"]
+[ext_resource type="PackedScene" uid="uid://ui8gxydi6xbk" path="res://scenes/food/cookie.tscn" id="5_wg51v"]
+[ext_resource type="PackedScene" uid="uid://be86e5gtpmml5" path="res://scenes/food/orange.tscn" id="6_7uiot"]
+[ext_resource type="PackedScene" uid="uid://b7u52xkoi762w" path="res://scenes/food/sausage.tscn" id="7_cc0vg"]
+[ext_resource type="PackedScene" uid="uid://bu2j5cxnu80bf" path="res://scenes/food/pizza.tscn" id="8_m0igi"]
+[ext_resource type="PackedScene" uid="uid://c1f5rtph8x5pl" path="res://scenes/food/crumbs.tscn" id="9_eilfg"]
+[ext_resource type="PackedScene" uid="uid://bvdedrhger7y1" path="res://scenes/food/vihrkuula.tscn" id="9_lrg8p"]
 
 [node name="level_1" instance=ExtResource("1_rj47a")]
+
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(-196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 0, 1, 0, 65535, 1, 0, -65536, 1, 0, -1, 1, 0, -65537, 1, 0, -131073, 1, 0, -196609, 1, 0, -131072, 1, 0, -196608, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -196601, 1, 0, -131065, 1, 0, -65529, 1, 0, 7, 1, 0, 65543, 1, 0, 65544, 1, 0, 8, 1, 0, -65528, 1, 0, -131064, 1, 0, -196600, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131071, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 65545, 1, 0, 65546, 1, 0, 10, 1, 0, -65526, 1, 0, 9, 1, 0, 131081, 1, 0, 131082, 1, 0, 65547, 1, 0, 11, 1, 0, -65525, 1, 0, -131061, 1, 0, -131062, 1, 0, -196598, 1, 0, -196599, 1, 0, -131063, 1, 0, -65527, 1, 0, -262134, 1, 0, -327670, 1, 0, -327671, 1, 0, -262135, 1, 0, -327672, 1, 0, -327673, 1, 0, -327674, 1, 0, -327675, 1, 0, -327676, 1, 0, -327677, 1, 0, -327678, 1, 0, -327679, 1, 0, -327680, 1, 0, -262145, 1, 0, -262146, 1, 0, -196610, 1, 0, -131074, 1, 0, -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 131083, 1, 0, 196619, 1, 0, -196597, 1, 0, -262133, 1, 0, -327669, 1, 0, 262141, 1, 0, 196605, 1, 0, 131069, 1, 0, 65533, 1, 0, -3, 1, 0, -65539, 1, 0, -131075, 1, 0, -196611, 1, 0, -262147, 1, 0, -327683, 1, 0, -327682, 1, 0, -327681, 1, 0, -393216, 1, 0, -393215, 1, 0, -393214, 1, 0, -393213, 1, 0, -393212, 1, 0, -393211, 1, 0, -393210, 1, 0, -393209, 1, 0, -393208, 1, 0, -393207, 1, 0, -393206, 1, 0, -393205, 1, 0, -4, 1, 0, -65540, 1, 0, -131076, 1, 0, -262148, 1, 0, -327684, 1, 0, -196612, 1, 0, 65532, 1, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, -458741, 1, 0, -458742, 1, 0, -458743, 1, 0, -458744, 1, 0, -458745, 1, 0, -458746, 1, 0, -458747, 1, 0, -458748, 1, 0, -458749, 1, 0, -458750, 1, 0, -458751, 1, 0, -458752, 1, 0, -393217, 1, 0, -393218, 1, 0, -393219, 1, 0, -393220, 1, 0)
+
+[node name="Objects" type="Node2D" parent="." index="1"]
+
+[node name="Plate" parent="Objects" index="0" instance=ExtResource("2_mxc25")]
+position = Vector2(832, -183)
+
+[node name="Plate2" parent="Objects" index="1" instance=ExtResource("2_mxc25")]
+position = Vector2(1061, -556)
+
+[node name="Plate3" parent="Objects" index="2" instance=ExtResource("2_mxc25")]
+position = Vector2(1332, -285)
+
+[node name="Plate4" parent="Objects" index="3" instance=ExtResource("2_mxc25")]
+position = Vector2(1182, 63)
+
+[node name="Plate5" parent="Objects" index="4" instance=ExtResource("2_mxc25")]
+position = Vector2(680, -500)
+
+[node name="Foods" type="Node2D" parent="." index="2"]
+
+[node name="Apple" parent="Foods" index="0" instance=ExtResource("3_hpqvu")]
+position = Vector2(789, -150)
+
+[node name="Apple2" parent="Foods" index="1" instance=ExtResource("3_hpqvu")]
+position = Vector2(906, -168)
+rotation = -0.968658
+
+[node name="Apple3" parent="Foods" index="2" instance=ExtResource("3_hpqvu")]
+position = Vector2(834, -255)
+rotation = 0.806342
+
+[node name="cherry" parent="Foods" index="3" instance=ExtResource("4_b5u5q")]
+position = Vector2(1105, -618)
+
+[node name="Cookie1" parent="Foods" index="4" instance=ExtResource("5_wg51v")]
+position = Vector2(1271, -286)
+
+[node name="Cookie2" parent="Foods" index="5" instance=ExtResource("5_wg51v")]
+position = Vector2(1359, -309)
+
+[node name="Cookie3" parent="Foods" index="6" instance=ExtResource("5_wg51v")]
+position = Vector2(1327, -233)
+
+[node name="orange" parent="Foods" index="7" instance=ExtResource("6_7uiot")]
+position = Vector2(1002, -577)
+
+[node name="orange2" parent="Foods" index="8" instance=ExtResource("6_7uiot")]
+position = Vector2(1102, -508)
+
+[node name="Sausage" parent="Foods" index="9" instance=ExtResource("7_cc0vg")]
+position = Vector2(1259, 68)
+
+[node name="Sausage2" parent="Foods" index="10" instance=ExtResource("7_cc0vg")]
+position = Vector2(1159, 70)
+
+[node name="pizza" parent="Foods" index="11" instance=ExtResource("8_m0igi")]
+position = Vector2(678, -487)
+rotation = 1.45037
+
+[node name="Vihrkuula" parent="Foods" index="12" instance=ExtResource("9_lrg8p")]
+position = Vector2(1399, -492)
+
+[node name="Vihrkuula2" parent="Foods" index="13" instance=ExtResource("9_lrg8p")]
+position = Vector2(1438, -474)
+
+[node name="Vihrkuula3" parent="Foods" index="14" instance=ExtResource("9_lrg8p")]
+position = Vector2(1390, -444)
+
+[node name="Vihrkuula4" parent="Foods" index="15" instance=ExtResource("9_lrg8p")]
+position = Vector2(1351, -481)
+
+[node name="Vihrkuula5" parent="Foods" index="16" instance=ExtResource("9_lrg8p")]
+position = Vector2(1431, -435)
+
+[node name="Vihrkuula6" parent="Foods" index="17" instance=ExtResource("9_lrg8p")]
+position = Vector2(1388, -533)
+
+[node name="Crumbs" parent="Crumbs" index="0" instance=ExtResource("9_eilfg")]
+position = Vector2(530, -45)
+
+[node name="Crumbs2" parent="Crumbs" index="1" instance=ExtResource("9_eilfg")]
+position = Vector2(438, -98)
+
+[node name="Crumbs3" parent="Crumbs" index="2" instance=ExtResource("9_eilfg")]
+position = Vector2(274, -4)
+
+[node name="Crumbs4" parent="Crumbs" index="3" instance=ExtResource("9_eilfg")]
+position = Vector2(211, -6)
+
+[node name="Crumbs5" parent="Crumbs" index="4" instance=ExtResource("9_eilfg")]
+position = Vector2(287, -59)
+
+[node name="Crumbs6" parent="Crumbs" index="5" instance=ExtResource("9_eilfg")]
+position = Vector2(368, 6)
+
+[node name="Crumbs7" parent="Crumbs" index="6" instance=ExtResource("9_eilfg")]
+position = Vector2(378, -74)
+
+[node name="Crumbs8" parent="Crumbs" index="7" instance=ExtResource("9_eilfg")]
+position = Vector2(376, -142)
+
+[node name="Crumbs9" parent="Crumbs" index="8" instance=ExtResource("9_eilfg")]
+position = Vector2(504, -132)
+
+[node name="Crumbs10" parent="Crumbs" index="9" instance=ExtResource("9_eilfg")]
+position = Vector2(598, -91)
+
+[node name="Crumbs11" parent="Crumbs" index="10" instance=ExtResource("9_eilfg")]
+position = Vector2(455, 4)
+
+[node name="Crumbs12" parent="Crumbs" index="11" instance=ExtResource("9_eilfg")]
+position = Vector2(430, -55)
+
+[node name="Crumbs13" parent="Crumbs" index="12" instance=ExtResource("9_eilfg")]
+position = Vector2(527, 57)
+
+[node name="Crumbs14" parent="Crumbs" index="13" instance=ExtResource("9_eilfg")]
+position = Vector2(646, -160)
+
+[node name="Crumbs15" parent="Crumbs" index="14" instance=ExtResource("9_eilfg")]
+position = Vector2(617, -249)
+
+[node name="Crumbs16" parent="Crumbs" index="15" instance=ExtResource("9_eilfg")]
+position = Vector2(661, -238)
+
+[node name="Crumbs17" parent="Crumbs" index="16" instance=ExtResource("9_eilfg")]
+position = Vector2(715, -62)
+
+[node name="Crumbs18" parent="Crumbs" index="17" instance=ExtResource("9_eilfg")]
+position = Vector2(785, 19)
+
+[node name="Crumbs19" parent="Crumbs" index="18" instance=ExtResource("9_eilfg")]
+position = Vector2(646, 9)
+
+[node name="Crumbs20" parent="Crumbs" index="19" instance=ExtResource("9_eilfg")]
+position = Vector2(753, -345)
+
+[node name="Camera2D2" parent="player" index="6"]
+zoom = Vector2(2, 2)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://be86e5gtpmml5"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/food/food_parent.tscn" id="1_25c4c"]
+[ext_resource type="Texture2D" uid="uid://b50phn1wyotnh" path="res://graphics/object/orange.png" id="2_sapuj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k1mmd"]
+radius = 97.0464
+
+[node name="orange" instance=ExtResource("1_25c4c")]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_sapuj")
+
+[node name="CPUParticles2D" parent="." index="1"]
+color = Color(0.976471, 0.486275, 0.152941, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+shape = SubResource("CircleShape2D_k1mmd")

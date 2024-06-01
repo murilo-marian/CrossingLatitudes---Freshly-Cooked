@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1f5rtph8x5pl"]
+
+[ext_resource type="Texture2D" uid="uid://dpkqe5u2tn7oh" path="res://graphics/object/crumb-colorless.png" id="1_b3mwd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4lwwq"]
+radius = 2.0
+
+[node name="Crumbs" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.486781, 0.317437, 0.216516, 1)
+texture = ExtResource("1_b3mwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4lwwq")

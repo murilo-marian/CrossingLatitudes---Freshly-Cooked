@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3w6fnoym5vfy"]
 
-[ext_resource type="Script" path="res://scenes/object/object_parent.gd" id="1_vuuyc"]
+[ext_resource type="Script" path="res://scenes/food/food_parent.gd" id="1_vuuyc"]
 
 [node name="ObjectParent" type="StaticBody2D"]
 collision_layer = 2
@@ -17,8 +17,10 @@ one_shot = true
 explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 166.67
-initial_velocity_max = 305.56
+initial_velocity_min = 666.67
+initial_velocity_max = 861.11
+scale_amount_min = 2.0
+scale_amount_max = 8.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
