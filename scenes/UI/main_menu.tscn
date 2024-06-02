@@ -76,10 +76,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -445.0
-offset_top = 94.0
-offset_right = -57.0
-offset_bottom = 121.0
+offset_left = -549.0
+offset_top = 35.0
+offset_right = -282.0
+offset_bottom = 181.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_gr5w7")
@@ -89,12 +89,12 @@ custom_minimum_size = Vector2(0, 110)
 layout_mode = 2
 theme = ExtResource("2_6dale")
 theme_override_fonts/font = ExtResource("4_fxuvs")
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 126
 text = "PLAY"
 flat = true
 
 [node name="Queen" type="Sprite2D" parent="."]
-position = Vector2(913, 272)
+position = Vector2(796, 441)
 rotation = -1.5708
 scale = Vector2(10, 10)
 texture = ExtResource("4_3q3bw")
@@ -107,6 +107,15 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 69.0
+offset_right = 1158.0
+offset_bottom = 255.0
+theme_override_fonts/normal_font = ExtResource("4_fxuvs")
+theme_override_font_sizes/normal_font_size = 120
+text = "UNTITLED ANT GAME"
 [node name="background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_3djix")
 volume_db = -4.685

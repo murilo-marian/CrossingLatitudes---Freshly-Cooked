@@ -160,9 +160,3 @@ position = Vector2(379, -268)
 
 [node name="Camera2D2" parent="player" index="6"]
 zoom = Vector2(2, 2)
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="8"]
-color = Color(0.709804, 0.470588, 0.290196, 1)
-
-[node name="WinUi" parent="." index="17"]
-next_scene = "res://scenes/UI/main_menu.tscn"
