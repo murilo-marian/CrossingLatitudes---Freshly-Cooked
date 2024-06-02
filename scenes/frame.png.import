@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwxlprg5ej5nh"
-path="res://.godot/imported/queen_mood_happy.png-9cdce2bdfcf509d9bbf12d30deae63c6.ctex"
+uid="uid://dyrsr53o11m6f"
+path="res://.godot/imported/frame.png-bc58de3503a0ac3d4326404a20440cdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/hud/queen_mood_happy.png"
-dest_files=["res://.godot/imported/queen_mood_happy.png-9cdce2bdfcf509d9bbf12d30deae63c6.ctex"]
+source_file="res://scenes/frame.png"
+dest_files=["res://.godot/imported/frame.png-bc58de3503a0ac3d4326404a20440cdf.ctex"]
 
 [params]
 
