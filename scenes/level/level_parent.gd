@@ -62,8 +62,8 @@ func change_player():
 func _on_player_crumb_entered(area): 
 	var layer = area.get_collision_layer()
 	if layer == 4:
-		$UI/FoodCounter.text = "Food: " + str(food)
 		food += 1
+		$UI/FoodCounter.text = "Food: " + str(food)
 		$Mordida.play()
 		area.queue_free() #TODO crumb eaten behavior
 	elif layer == 32:
