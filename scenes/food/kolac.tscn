@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://behvekertw3fw"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/food/food_parent.tscn" id="1_awoiu"]
+[ext_resource type="Texture2D" uid="uid://cxwrw5aklu67v" path="res://graphics/object/food_kolac.png" id="2_c6rg6"]
+
+[node name="kolac" instance=ExtResource("1_awoiu")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_c6rg6")
+
+[node name="CPUParticles2D" parent="." index="1"]
+color = Color(0.145098, 0.0784314, 0.223529, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3"]
+polygon = PackedVector2Array(-24, 79, 30, 80, 55, 70, 87, 48, 96, 21, 95, -1, 71, -40, 35, -64, -26, -65, -69, -44, -89, -9, -96, 16, -86, 40, -76, 54, -59, 66, -35, 77)

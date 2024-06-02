@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce5ht4fpkgwb2"]
+
+[ext_resource type="Texture2D" uid="uid://b1b6ep57hcpgv" path="res://graphics/object/plate_smaller.png" id="1_odmht"]
+
+[node name="Plate" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_odmht")

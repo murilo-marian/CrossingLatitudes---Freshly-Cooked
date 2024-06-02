@@ -1,6 +1,9 @@
 extends Node2D
 var follower_scene = preload("res://scenes/player/follower.tscn")
 
+func _physics_process(_delta):
+	$LeafParticles.global_position = $player.global_position - Vector2(0, 500)
+
 func _on_player_spawn_ant():
 	spawn_follower()
 	
@@ -32,10 +35,11 @@ func on_ant_circle(area):
 func _on_player_circle_formed(area):
 	on_ant_circle(area)
 
-func _on_eating_area_body_entered(body):
+func _on_eating_area_body_entered(body): #add points for food later
 	if body.has_method("get_eaten"):
-		print(body)
+		$Mordida.play()
 		body.get_eaten()
+		
 
 func change_player():
 	if $followers.get_child_count() == 0: #TODO change later to game over screen and stuff
@@ -50,3 +54,12 @@ func change_player():
 
 func _on_player_kill_ant():
 	change_player()
+	
+	
+func _on_player_crumb_entered(area): 
+	var layer = area.get_collision_layer()
+	if layer == 4:
+		area.queue_free() #TODO crumb eaten behavior
+	elif layer == 32:
+		area.queue_free()
+		change_player()

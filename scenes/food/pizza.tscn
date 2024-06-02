@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu2j5cxnu80bf"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/food/food_parent.tscn" id="1_g3bwe"]
+[ext_resource type="Texture2D" uid="uid://dpk0akp2gugjc" path="res://graphics/object/pizza.png" id="2_b36w6"]
+
+[node name="pizza" instance=ExtResource("1_g3bwe")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_b36w6")
+
+[node name="CPUParticles2D" parent="." index="1"]
+color = Color(0.976471, 0.658824, 0.145098, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3"]
+polygon = PackedVector2Array(-94, 74, -53, 98, -14, 107, 25, 107, 68, 92, 94, 78, 95, 52, 8, -116, -8, -115, -92, 54)
