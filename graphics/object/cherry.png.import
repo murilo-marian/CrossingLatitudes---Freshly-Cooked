@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjwthfbrxkxlv"
-path="res://.godot/imported/sausage.png-6120de48cb811c99d5e69ec162f18e3f.ctex"
+uid="uid://bvyplaw120pgd"
+path="res://.godot/imported/cherry.png-201a0b275ee08c85e5e050f89d7708e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/object/sausage.png"
-dest_files=["res://.godot/imported/sausage.png-6120de48cb811c99d5e69ec162f18e3f.ctex"]
+source_file="res://graphics/object/cherry.png"
+dest_files=["res://.godot/imported/cherry.png-201a0b275ee08c85e5e050f89d7708e5.ctex"]
 
 [params]
 

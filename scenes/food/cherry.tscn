@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2pnaokoalxcw"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/food/food_parent.tscn" id="1_dgou0"]
+[ext_resource type="Texture2D" uid="uid://bvyplaw120pgd" path="res://graphics/object/cherry.png" id="2_sygwi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tw3fq"]
+radius = 61.0328
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s2782"]
+radius = 58.1378
+
+[node name="cherry" instance=ExtResource("1_dgou0")]
+scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_sygwi")
+
+[node name="CPUParticles2D" parent="." index="1"]
+color = Color(0.760203, 3.70607e-06, 4.81307e-07, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(60, 24)
+shape = SubResource("CircleShape2D_tw3fq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="4"]
+position = Vector2(-63, 13)
+shape = SubResource("CircleShape2D_s2782")
