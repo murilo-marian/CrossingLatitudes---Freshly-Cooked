@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://cds1loia75f7p"]
+
+[ext_resource type="Script" path="res://scenes/player/ant_parent.gd" id="1_xah5v"]
+[ext_resource type="Texture2D" uid="uid://lvay1g8pkukb" path="res://graphics/player/ant_moving_animation.png" id="2_gev22"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1wgu"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_b2jd5"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_5c3q2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vyxro"]
+_data = {
+"RESET": SubResource("Animation_5c3q2"),
+"walk": SubResource("Animation_b2jd5")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xfpw"]
+size = Vector2(29, 18)
+
+[node name="AntParent" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_xah5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_k1wgu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+rotation = 1.5708
+texture = ExtResource("2_gev22")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vyxro")
+}
+autoplay = "walk"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_5xfpw")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjm4x3xxknjg0"]
+
+[ext_resource type="Script" path="res://scenes/level/level_parent.gd" id="1_0xdte"]
+[ext_resource type="PackedScene" uid="uid://bq808svrkeft2" path="res://scenes/player/player.tscn" id="1_6xohy"]
+
+[node name="LevelParent" type="Node2D"]
+script = ExtResource("1_0xdte")
+
+[node name="followers" type="Node2D" parent="."]
+
+[node name="player" parent="." instance=ExtResource("1_6xohy")]
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+
+[node name="eatingArea" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
+
+[connection signal="circleFormed" from="player" to="." method="_on_player_circle_formed"]
+[connection signal="killAnt" from="player" to="." method="_on_player_kill_ant"]
+[connection signal="spawnAnt" from="player" to="." method="_on_player_spawn_ant"]
+[connection signal="body_entered" from="eatingArea" to="." method="_on_eating_area_body_entered"]

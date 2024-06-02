@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ycdi6x5pb2q"]
+
+[ext_resource type="PackedScene" uid="uid://b3w6fnoym5vfy" path="res://scenes/object/object_parent.tscn" id="1_bp75r"]
+[ext_resource type="Texture2D" uid="uid://dodsyvgi73m1b" path="res://graphics/object/Apple.png" id="2_js24b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw11a"]
+radius = 45.0
+
+[sub_resource type="Curve" id="Curve_ppj1h"]
+_data = [Vector2(0.129032, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="ObjectParent" instance=ExtResource("1_bp75r")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_yw11a")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_js24b")
+
+[node name="CPUParticles2D" parent="." index="2"]
+lifetime = 0.3
+initial_velocity_min = 402.78
+initial_velocity_max = 555.56
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_ppj1h")
+color = Color(1, 0, 0, 1)
