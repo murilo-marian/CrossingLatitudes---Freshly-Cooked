@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjm4x3xxknjg0"]
+[gd_scene load_steps=5 format=3 uid="uid://bjm4x3xxknjg0"]
 
 [ext_resource type="Script" path="res://scenes/level/level_parent.gd" id="1_0xdte"]
 [ext_resource type="PackedScene" uid="uid://bq808svrkeft2" path="res://scenes/player/player.tscn" id="1_6xohy"]
+[ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/object/apple.tscn" id="2_ibjt2"]
+[ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="4_mca76"]
 
 [node name="LevelParent" type="Node2D"]
 script = ExtResource("1_0xdte")
@@ -15,6 +17,11 @@ script = ExtResource("1_0xdte")
 [node name="eatingArea" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 2
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mca76")
+volume_db = -4.685
+autoplay = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
 
