@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://nwchhchjdad6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp4cp"]
-bg_color = Color(0.436618, 0.74052, 0.85024, 1)
+bg_color = Color(0.999991, 0.284971, 0.245695, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -16,7 +16,7 @@ shadow_size = 1
 shadow_offset = Vector2(0, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3ikm"]
-bg_color = Color(0.339677, 0.647368, 0.755628, 1)
+bg_color = Color(0.998351, 0.502598, 0.445485, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -31,7 +31,7 @@ shadow_size = 1
 shadow_offset = Vector2(0, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjgl5"]
-bg_color = Color(0.197039, 0.431586, 0.512267, 1)
+bg_color = Color(0.745539, 0.0557153, 0, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
