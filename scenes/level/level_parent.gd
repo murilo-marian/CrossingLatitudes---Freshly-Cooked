@@ -59,6 +59,7 @@ func _on_player_kill_ant():
 func _on_player_crumb_entered(area): 
 	var layer = area.get_collision_layer()
 	if layer == 4:
+		$Mordida.play()
 		area.queue_free() #TODO crumb eaten behavior
 	elif layer == 32:
 		area.queue_free()
