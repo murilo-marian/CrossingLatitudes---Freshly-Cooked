@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2dbagccncbrb"]
+
+[ext_resource type="Script" path="res://scenes/UI/WinUI.gd" id="1_qs3k0"]
+[ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="2_m2f8j"]
+
+[sub_resource type="Theme" id="Theme_ovkms"]
+
+[node name="WinUi" type="CanvasLayer"]
+script = ExtResource("1_qs3k0")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -253.0
+offset_top = 164.0
+offset_right = 239.0
+offset_bottom = 333.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_m2f8j")
+theme_override_font_sizes/font_size = 150
+text = "VICTORY"
+
+[node name="LoseModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.197937, 0.197937, 0.197937, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -433.0
+offset_top = 49.0
+offset_right = 431.0
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ovkms")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m2f8j")
+theme_override_font_sizes/font_size = 100
+text = "Next Level"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

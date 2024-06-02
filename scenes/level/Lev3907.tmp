@@ -72,7 +72,7 @@ position = Vector2(646, 9)
 position = Vector2(753, -345)
 
 [node name="Poison" parent="Poison" index="0" instance=ExtResource("3_mbb0v")]
-position = Vector2(331, -177)
+position = Vector2(100, -45)
 
 [node name="Apple" parent="Foods" index="0" instance=ExtResource("3_dl3ha")]
 position = Vector2(207, -219)
@@ -106,6 +106,3 @@ limit_bottom = 600
 
 [node name="LeafParticles" parent="." index="9"]
 position = Vector2(2, -377)
-
-[node name="WinUi" parent="." index="16"]
-next_scene = "res://scenes/level/level1.tscn"
