@@ -33,65 +33,6 @@ position = Vector2(1182, 63)
 [node name="Plate5" parent="Objects" index="4" instance=ExtResource("2_mxc25")]
 position = Vector2(680, -500)
 
-[node name="Foods" type="Node2D" parent="." index="2"]
-
-[node name="Apple" parent="Foods" index="0" instance=ExtResource("3_hpqvu")]
-position = Vector2(789, -150)
-
-[node name="Apple2" parent="Foods" index="1" instance=ExtResource("3_hpqvu")]
-position = Vector2(906, -168)
-rotation = -0.968658
-
-[node name="Apple3" parent="Foods" index="2" instance=ExtResource("3_hpqvu")]
-position = Vector2(834, -255)
-rotation = 0.806342
-
-[node name="cherry" parent="Foods" index="3" instance=ExtResource("4_b5u5q")]
-position = Vector2(1105, -618)
-
-[node name="Cookie1" parent="Foods" index="4" instance=ExtResource("5_wg51v")]
-position = Vector2(1271, -286)
-
-[node name="Cookie2" parent="Foods" index="5" instance=ExtResource("5_wg51v")]
-position = Vector2(1359, -309)
-
-[node name="Cookie3" parent="Foods" index="6" instance=ExtResource("5_wg51v")]
-position = Vector2(1327, -233)
-
-[node name="orange" parent="Foods" index="7" instance=ExtResource("6_7uiot")]
-position = Vector2(1002, -577)
-
-[node name="orange2" parent="Foods" index="8" instance=ExtResource("6_7uiot")]
-position = Vector2(1102, -508)
-
-[node name="Sausage" parent="Foods" index="9" instance=ExtResource("7_cc0vg")]
-position = Vector2(1259, 68)
-
-[node name="Sausage2" parent="Foods" index="10" instance=ExtResource("7_cc0vg")]
-position = Vector2(1159, 70)
-
-[node name="pizza" parent="Foods" index="11" instance=ExtResource("8_m0igi")]
-position = Vector2(678, -487)
-rotation = 1.45037
-
-[node name="Vihrkuula" parent="Foods" index="12" instance=ExtResource("9_lrg8p")]
-position = Vector2(1399, -492)
-
-[node name="Vihrkuula2" parent="Foods" index="13" instance=ExtResource("9_lrg8p")]
-position = Vector2(1438, -474)
-
-[node name="Vihrkuula3" parent="Foods" index="14" instance=ExtResource("9_lrg8p")]
-position = Vector2(1390, -444)
-
-[node name="Vihrkuula4" parent="Foods" index="15" instance=ExtResource("9_lrg8p")]
-position = Vector2(1351, -481)
-
-[node name="Vihrkuula5" parent="Foods" index="16" instance=ExtResource("9_lrg8p")]
-position = Vector2(1431, -435)
-
-[node name="Vihrkuula6" parent="Foods" index="17" instance=ExtResource("9_lrg8p")]
-position = Vector2(1388, -533)
-
 [node name="Crumbs" parent="Crumbs" index="0" instance=ExtResource("9_eilfg")]
 position = Vector2(530, -45)
 
@@ -151,6 +92,66 @@ position = Vector2(646, 9)
 
 [node name="Crumbs20" parent="Crumbs" index="19" instance=ExtResource("9_eilfg")]
 position = Vector2(753, -345)
+
+[node name="Apple" parent="Foods" index="0" instance=ExtResource("3_hpqvu")]
+position = Vector2(789, -150)
+
+[node name="Apple2" parent="Foods" index="1" instance=ExtResource("3_hpqvu")]
+position = Vector2(906, -168)
+rotation = -0.968658
+
+[node name="Apple3" parent="Foods" index="2" instance=ExtResource("3_hpqvu")]
+position = Vector2(834, -255)
+rotation = 0.806342
+
+[node name="cherry" parent="Foods" index="3" instance=ExtResource("4_b5u5q")]
+position = Vector2(1105, -618)
+
+[node name="Cookie1" parent="Foods" index="4" instance=ExtResource("5_wg51v")]
+position = Vector2(1271, -286)
+
+[node name="Cookie2" parent="Foods" index="5" instance=ExtResource("5_wg51v")]
+position = Vector2(1359, -309)
+
+[node name="Cookie3" parent="Foods" index="6" instance=ExtResource("5_wg51v")]
+position = Vector2(1327, -233)
+
+[node name="orange" parent="Foods" index="7" instance=ExtResource("6_7uiot")]
+position = Vector2(1002, -577)
+
+[node name="orange2" parent="Foods" index="8" instance=ExtResource("6_7uiot")]
+position = Vector2(1102, -508)
+
+[node name="Sausage" parent="Foods" index="9" instance=ExtResource("7_cc0vg")]
+position = Vector2(1259, 68)
+
+[node name="Sausage2" parent="Foods" index="10" instance=ExtResource("7_cc0vg")]
+position = Vector2(1159, 70)
+
+[node name="pizza" parent="Foods" index="11" instance=ExtResource("8_m0igi")]
+position = Vector2(678, -487)
+rotation = 1.45037
+
+[node name="Vihrkuula" parent="Foods" index="12" instance=ExtResource("9_lrg8p")]
+position = Vector2(1399, -492)
+
+[node name="Vihrkuula2" parent="Foods" index="13" instance=ExtResource("9_lrg8p")]
+position = Vector2(1438, -474)
+
+[node name="Vihrkuula3" parent="Foods" index="14" instance=ExtResource("9_lrg8p")]
+position = Vector2(1390, -444)
+
+[node name="Vihrkuula4" parent="Foods" index="15" instance=ExtResource("9_lrg8p")]
+position = Vector2(1351, -481)
+
+[node name="Vihrkuula5" parent="Foods" index="16" instance=ExtResource("9_lrg8p")]
+position = Vector2(1431, -435)
+
+[node name="Vihrkuula6" parent="Foods" index="17" instance=ExtResource("9_lrg8p")]
+position = Vector2(1388, -533)
+
+[node name="player" parent="." index="5"]
+position = Vector2(379, -268)
 
 [node name="Camera2D2" parent="player" index="6"]
 zoom = Vector2(2, 2)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjm4x3xxknjg0"]
+[gd_scene load_steps=10 format=3 uid="uid://bjm4x3xxknjg0"]
 
 [ext_resource type="Script" path="res://scenes/level/level_parent.gd" id="1_0xdte"]
 [ext_resource type="PackedScene" uid="uid://bq808svrkeft2" path="res://scenes/player/player.tscn" id="1_6xohy"]
 [ext_resource type="Texture2D" uid="uid://c0lhs42cqboks" path="res://graphics/texture/grass.png" id="3_6fapi"]
 [ext_resource type="Texture2D" uid="uid://dotys2n67joes" path="res://graphics/texture/blanket.png" id="3_wngas"]
+[ext_resource type="Texture2D" uid="uid://c2jnf2bpskap" path="res://graphics/texture/leaf_particle.png" id="5_k5gtl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xy25"]
 texture = ExtResource("3_wngas")
@@ -20,6 +21,10 @@ tile_size = Vector2i(256, 256)
 sources/0 = SubResource("TileSetAtlasSource_7xy25")
 sources/1 = SubResource("TileSetAtlasSource_8pf45")
 
+[sub_resource type="Curve" id="Curve_cy1sq"]
+_data = [Vector2(0.120968, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.406593), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="LevelParent" type="Node2D"]
 script = ExtResource("1_0xdte")
 
@@ -31,6 +36,8 @@ format = 2
 
 [node name="followers" type="Node2D" parent="."]
 
+[node name="Foods" type="Node2D" parent="."]
+
 [node name="player" parent="." instance=ExtResource("1_6xohy")]
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
@@ -40,6 +47,26 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
+
+[node name="LeafParticles" type="CPUParticles2D" parent="."]
+position = Vector2(377, -267)
+amount = 4
+lifetime = 15.0
+texture = ExtResource("5_k5gtl")
+emission_shape = 3
+emission_rect_extents = Vector2(500, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 70.0
+initial_velocity_max = 120.0
+angular_velocity_min = 69.0
+angular_velocity_max = 69.0
+angle_min = -160.0
+angle_max = 220.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_cy1sq")
 
 [connection signal="circleFormed" from="player" to="." method="_on_player_circle_formed"]
 [connection signal="crumbEntered" from="player" to="." method="_on_player_crumb_entered"]

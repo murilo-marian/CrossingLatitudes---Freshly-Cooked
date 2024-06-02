@@ -6,11 +6,11 @@
 radius = 2.0
 
 [node name="Crumbs" type="Area2D"]
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.486781, 0.317437, 0.216516, 1)
+modulate = Color(0.933333, 0.913725, 0.352941, 1)
 texture = ExtResource("1_b3mwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

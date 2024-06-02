@@ -1,6 +1,9 @@
 extends Node2D
 var follower_scene = preload("res://scenes/player/follower.tscn")
 
+func _physics_process(_delta):
+	$LeafParticles.global_position = $player.global_position - Vector2(0, 500)
+
 func _on_player_spawn_ant():
 	spawn_follower()
 	
