@@ -5,7 +5,10 @@ var food = 0
 func _physics_process(_delta):
 	if get_node_or_null("player") != null:
 		$LeafParticles.global_position = $player.global_position - Vector2(0, 500)
-
+		
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+		
 func _on_player_spawn_ant():
 	spawn_follower()
 	
