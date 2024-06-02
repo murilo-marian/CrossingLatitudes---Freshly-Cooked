@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://bqnxhk5cfrf6i"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://4x58l1dnncik"]
+>>>>>>> origin
 
 [ext_resource type="PackedScene" uid="uid://bjm4x3xxknjg0" path="res://scenes/level/level_parent.tscn" id="1_ve6qt"]
 [ext_resource type="PackedScene" uid="uid://c1f5rtph8x5pl" path="res://scenes/food/crumbs.tscn" id="2_utqyo"]
@@ -209,8 +213,13 @@ position = Vector2(563, 218)
 [node name="Crumbs19" parent="Crumbs" index="19" instance=ExtResource("2_utqyo")]
 position = Vector2(310, 585)
 
+<<<<<<< HEAD
 [node name="Crumbs20" parent="Crumbs" index="20" instance=ExtResource("2_utqyo")]
 position = Vector2(449, -126)
+=======
+[node name="Poison" parent="Poison" index="0" instance=ExtResource("3_mbb0v")]
+position = Vector2(331, -177)
+>>>>>>> origin
 
 [node name="Poisons" type="Control" parent="." index="7"]
 layout_mode = 3
@@ -311,6 +320,7 @@ limit_top = -600
 limit_right = 1000
 limit_bottom = 600
 
+<<<<<<< HEAD
 [node name="eatingArea" parent="." index="11"]
 position = Vector2(318, -114)
 
@@ -319,3 +329,10 @@ position = Vector2(2, -377)
 
 [node name="Mordida" parent="." index="14"]
 position = Vector2(318, -114)
+=======
+[node name="LeafParticles" parent="." index="9"]
+position = Vector2(2, -377)
+
+[node name="WinUi" parent="." index="16"]
+next_scene = "res://scenes/level/level1.tscn"
+>>>>>>> origin

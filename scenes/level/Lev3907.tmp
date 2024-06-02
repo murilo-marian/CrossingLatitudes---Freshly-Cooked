@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://4x58l1dnncik"]
+
+[ext_resource type="PackedScene" uid="uid://bjm4x3xxknjg0" path="res://scenes/level/level_parent.tscn" id="1_ve6qt"]
+[ext_resource type="PackedScene" uid="uid://c1f5rtph8x5pl" path="res://scenes/food/crumbs.tscn" id="2_utqyo"]
+[ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/food/apple.tscn" id="3_dl3ha"]
+[ext_resource type="PackedScene" uid="uid://cnlnydapheqpv" path="res://scenes/food/poison.tscn" id="3_mbb0v"]
+[ext_resource type="PackedScene" uid="uid://c2pnaokoalxcw" path="res://scenes/food/cherry.tscn" id="4_1yreh"]
+
+[node name="Level0" instance=ExtResource("1_ve6qt")]
+
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(-65536, 1, 0, -1, 1, 0, -2, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, -65534, 1, 0, -65535, 1, 0, -131071, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -131076, 1, 0, -65540, 1, 0, -4, 1, 0, -3, 1, 0, 65533, 1, 0, -131070, 1, 0, -65537, 1, 0, -65538, 1, 0, -65539, 1, 0, 65532, 1, 0, -131072, 1, 0, 4, 1, 0, 3, 1, 0, -65533, 1, 0, -131069, 1, 0, -196605, 1, 0, -65532, 1, 0, -131068, 1, 0, -196606, 1, 0, -196607, 1, 0, -196604, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0)
+
+[node name="Crumbs" parent="Crumbs" index="0" instance=ExtResource("2_utqyo")]
+position = Vector2(530, -45)
+
+[node name="Crumbs2" parent="Crumbs" index="1" instance=ExtResource("2_utqyo")]
+position = Vector2(438, -98)
+
+[node name="Crumbs3" parent="Crumbs" index="2" instance=ExtResource("2_utqyo")]
+position = Vector2(274, -4)
+
+[node name="Crumbs4" parent="Crumbs" index="3" instance=ExtResource("2_utqyo")]
+position = Vector2(211, -6)
+
+[node name="Crumbs5" parent="Crumbs" index="4" instance=ExtResource("2_utqyo")]
+position = Vector2(287, -59)
+
+[node name="Crumbs6" parent="Crumbs" index="5" instance=ExtResource("2_utqyo")]
+position = Vector2(368, 6)
+
+[node name="Crumbs7" parent="Crumbs" index="6" instance=ExtResource("2_utqyo")]
+position = Vector2(378, -74)
+
+[node name="Crumbs8" parent="Crumbs" index="7" instance=ExtResource("2_utqyo")]
+position = Vector2(376, -142)
+
+[node name="Crumbs9" parent="Crumbs" index="8" instance=ExtResource("2_utqyo")]
+position = Vector2(504, -132)
+
+[node name="Crumbs10" parent="Crumbs" index="9" instance=ExtResource("2_utqyo")]
+position = Vector2(598, -91)
+
+[node name="Crumbs11" parent="Crumbs" index="10" instance=ExtResource("2_utqyo")]
+position = Vector2(455, 4)
+
+[node name="Crumbs12" parent="Crumbs" index="11" instance=ExtResource("2_utqyo")]
+position = Vector2(430, -55)
+
+[node name="Crumbs13" parent="Crumbs" index="12" instance=ExtResource("2_utqyo")]
+position = Vector2(527, 57)
+
+[node name="Crumbs14" parent="Crumbs" index="13" instance=ExtResource("2_utqyo")]
+position = Vector2(646, -160)
+
+[node name="Crumbs15" parent="Crumbs" index="14" instance=ExtResource("2_utqyo")]
+position = Vector2(617, -249)
+
+[node name="Crumbs16" parent="Crumbs" index="15" instance=ExtResource("2_utqyo")]
+position = Vector2(661, -238)
+
+[node name="Crumbs17" parent="Crumbs" index="16" instance=ExtResource("2_utqyo")]
+position = Vector2(715, -62)
+
+[node name="Crumbs18" parent="Crumbs" index="17" instance=ExtResource("2_utqyo")]
+position = Vector2(785, 19)
+
+[node name="Crumbs19" parent="Crumbs" index="18" instance=ExtResource("2_utqyo")]
+position = Vector2(646, 9)
+
+[node name="Crumbs20" parent="Crumbs" index="19" instance=ExtResource("2_utqyo")]
+position = Vector2(753, -345)
+
+[node name="Poison" parent="Poison" index="0" instance=ExtResource("3_mbb0v")]
+position = Vector2(100, -45)
+
+[node name="Apple" parent="Foods" index="0" instance=ExtResource("3_dl3ha")]
+position = Vector2(207, -219)
+
+[node name="cherry" parent="Foods" index="1" instance=ExtResource("4_1yreh")]
+position = Vector2(15, -193)
+rotation = 1.12748
+
+[node name="cherry2" parent="Foods" index="2" instance=ExtResource("4_1yreh")]
+position = Vector2(-202, -225)
+rotation = 0.523599
+
+[node name="cherry3" parent="Foods" index="3" instance=ExtResource("4_1yreh")]
+position = Vector2(-54, -135)
+rotation = -3.06131
+
+[node name="cherry4" parent="Foods" index="4" instance=ExtResource("4_1yreh")]
+position = Vector2(-89, -214)
+rotation = -1.61094
+
+[node name="cherry5" parent="Foods" index="5" instance=ExtResource("4_1yreh")]
+position = Vector2(-151, -155)
+rotation = -0.483456
+
+[node name="Camera2D2" parent="player" index="6"]
+zoom = Vector2(2, 2)
+limit_left = -1000
+limit_top = -600
+limit_right = 1000
+limit_bottom = 600
+
+[node name="LeafParticles" parent="." index="9"]
+position = Vector2(2, -377)

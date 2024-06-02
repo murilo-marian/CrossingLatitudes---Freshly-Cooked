@@ -1,3 +1,4 @@
+<<<<<<< HEAD:scenes/level/UI.tscn
 [gd_scene load_steps=25 format=3 uid="uid://bbf4lw57nc7m2"]
 
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_wqjso"]
@@ -11,6 +12,20 @@
 [ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy.png" id="5_hl3yi"]
 [ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="6_3k40y"]
 [ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="7_34l06"]
+=======
+[gd_scene load_steps=24 format=3 uid="uid://bbf4lw57nc7m2"]
+
+[ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_q34su"]
+[ext_resource type="Script" path="res://scenes/UI/TimerLabel.gd" id="2_cwgiy"]
+[ext_resource type="Script" path="res://scenes/UI/TimerCounter.gd" id="3_g83y5"]
+[ext_resource type="Script" path="res://scenes/UI/UI.gd" id="4_g3bfs"]
+[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_bepyk"]
+[ext_resource type="Script" path="res://scenes/UI/QueenMood.gd" id="5_couci"]
+[ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy.png" id="6_fsssa"]
+[ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="7_dfrt5"]
+[ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="8_1mg2o"]
+[ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="9_1c5ox"]
+>>>>>>> origin:scenes/UI/UI.tscn
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk0ri"]
 bg_color = Color(1, 1, 1, 1)
@@ -29,11 +44,11 @@ shadow_color = Color(0.0350165, 0.0679927, 0.0656997, 0.6)
 anti_aliasing_size = 1.241
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wgbx"]
-atlas = ExtResource("5_1gfan")
+atlas = ExtResource("5_bepyk")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vcsb1"]
-atlas = ExtResource("5_1gfan")
+atlas = ExtResource("5_bepyk")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ytiv"]
@@ -51,11 +66,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ao8c"]
-atlas = ExtResource("5_hl3yi")
+atlas = ExtResource("6_fsssa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1j7n"]
-atlas = ExtResource("5_hl3yi")
+atlas = ExtResource("6_fsssa")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_repaj"]
@@ -73,11 +88,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qc2hs"]
-atlas = ExtResource("6_3k40y")
+atlas = ExtResource("7_dfrt5")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8dllx"]
-atlas = ExtResource("6_3k40y")
+atlas = ExtResource("7_dfrt5")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_41fit"]
@@ -95,11 +110,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l2nrg"]
-atlas = ExtResource("7_34l06")
+atlas = ExtResource("8_1mg2o")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fyx3c"]
-atlas = ExtResource("7_34l06")
+atlas = ExtResource("8_1mg2o")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qyf4c"]
@@ -117,6 +132,7 @@ animations = [{
 }]
 
 [node name="Control" type="CanvasLayer"]
+script = ExtResource("4_g3bfs")
 metadata/_edit_use_anchors_ = true
 
 [node name="Bar" type="Sprite2D" parent="."]
@@ -140,15 +156,15 @@ offset_right = 261.0
 offset_bottom = 98.0
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("1_wqjso")
+theme_override_fonts/font = ExtResource("1_q34su")
 theme_override_font_sizes/font_size = 60
 text = "00:00"
-script = ExtResource("2_8q8hd")
+script = ExtResource("2_cwgiy")
 metadata/_edit_use_anchors_ = true
 
 [node name="TimerCounter" type="Timer" parent="TimerLabel"]
 one_shot = true
-script = ExtResource("3_nfo5m")
+script = ExtResource("3_g83y5")
 
 [node name="Button" type="Sprite2D" parent="."]
 position = Vector2(1080, 57.625)
@@ -169,8 +185,13 @@ size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
+<<<<<<< HEAD:scenes/level/UI.tscn
 theme_override_fonts/font = ExtResource("1_wqjso")
 theme_override_font_sizes/font_size = 40
+=======
+theme_override_fonts/font = ExtResource("1_q34su")
+theme_override_font_sizes/font_size = 80
+>>>>>>> origin:scenes/UI/UI.tscn
 text = "Food: 0"
 
 [node name="QueenMood" type="Control" parent="."]
@@ -187,7 +208,7 @@ offset_bottom = -288.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
-script = ExtResource("3_bwtnu")
+script = ExtResource("5_couci")
 
 [node name="happy" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
@@ -223,4 +244,6 @@ offset_top = 21.0
 offset_right = 41.0
 offset_bottom = 61.0
 scale = Vector2(2, 2)
-texture = ExtResource("3_k7vl2")
+texture = ExtResource("9_1c5ox")
+
+[connection signal="timeout" from="TimerLabel/TimerCounter" to="." method="_on_timer_counter_timeout"]
