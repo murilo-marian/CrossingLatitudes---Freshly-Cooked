@@ -1,101 +1,317 @@
+<<<<<<< HEAD
+[gd_scene load_steps=13 format=3 uid="uid://bqnxhk5cfrf6i"]
+=======
 [gd_scene load_steps=6 format=3 uid="uid://4x58l1dnncik"]
+>>>>>>> origin
 
 [ext_resource type="PackedScene" uid="uid://bjm4x3xxknjg0" path="res://scenes/level/level_parent.tscn" id="1_ve6qt"]
 [ext_resource type="PackedScene" uid="uid://c1f5rtph8x5pl" path="res://scenes/food/crumbs.tscn" id="2_utqyo"]
 [ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/food/apple.tscn" id="3_dl3ha"]
 [ext_resource type="PackedScene" uid="uid://cnlnydapheqpv" path="res://scenes/food/poison.tscn" id="3_mbb0v"]
 [ext_resource type="PackedScene" uid="uid://c2pnaokoalxcw" path="res://scenes/food/cherry.tscn" id="4_1yreh"]
+[ext_resource type="Texture2D" uid="uid://cyu27bnbbb6tx" path="res://graphics/object/wooden_plate_tutorial_1.png" id="6_7lf4e"]
+[ext_resource type="Texture2D" uid="uid://cmnm4gk04pnph" path="res://graphics/object/wooden_plate_tutorial_2.png" id="7_62iyq"]
+[ext_resource type="Texture2D" uid="uid://b5nftyuy2s5v7" path="res://graphics/object/wooden_plate_tutorial_3.png" id="8_1tqhb"]
+[ext_resource type="Texture2D" uid="uid://bpeo0isocbbky" path="res://graphics/object/wooden_plate_tutorial_4.png" id="9_x8yah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1gxy"]
+size = Vector2(968.536, 582.974)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wjh4"]
+size = Vector2(936.244, 586.528)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa5tc"]
+size = Vector2(977.802, 564.68)
 
 [node name="Level0" instance=ExtResource("1_ve6qt")]
 
 [node name="TileMap" parent="." index="0"]
 layer_0/tile_data = PackedInt32Array(-65536, 1, 0, -1, 1, 0, -2, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, -65534, 1, 0, -65535, 1, 0, -131071, 1, 0, -196608, 1, 0, -131073, 1, 0, -131074, 1, 0, -131075, 1, 0, -131076, 1, 0, -65540, 1, 0, -4, 1, 0, -3, 1, 0, 65533, 1, 0, -131070, 1, 0, -65537, 1, 0, -65538, 1, 0, -65539, 1, 0, 65532, 1, 0, -131072, 1, 0, 4, 1, 0, 3, 1, 0, -65533, 1, 0, -131069, 1, 0, -196605, 1, 0, -65532, 1, 0, -131068, 1, 0, -196606, 1, 0, -196607, 1, 0, -196604, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0)
 
+[node name="WoodenPlateTutorial" type="Sprite2D" parent="." index="1"]
+position = Vector2(62, -211)
+scale = Vector2(0.53125, 0.554688)
+texture = ExtResource("6_7lf4e")
+
+[node name="WoodenPlateTutorial1" type="StaticBody2D" parent="WoodenPlateTutorial" index="0"]
+position = Vector2(-1.88232, -88.338)
+scale = Vector2(0.394531, 0.389648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlateTutorial/WoodenPlateTutorial1" index="0"]
+position = Vector2(4.77087, -46.2679)
+shape = SubResource("RectangleShape2D_n1gxy")
+
+[node name="WoodenPlateTutorial2" type="Sprite2D" parent="." index="2"]
+position = Vector2(314, -212)
+scale = Vector2(0.550781, 0.564453)
+texture = ExtResource("7_62iyq")
+
+[node name="WoodenPlateTutorial2" type="StaticBody2D" parent="WoodenPlateTutorial2" index="0"]
+position = Vector2(-5.9077, -109.841)
+scale = Vector2(0.40918, 0.389648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlateTutorial2/WoodenPlateTutorial2" index="0"]
+position = Vector2(16.6564, 29.554)
+shape = SubResource("RectangleShape2D_4wjh4")
+
+[node name="WoodenPlateTutorial3" type="Sprite2D" parent="." index="3"]
+position = Vector2(317, -365)
+scale = Vector2(0.53125, 0.554688)
+texture = ExtResource("9_x8yah")
+
+[node name="WoodenPlateTutorial1" type="StaticBody2D" parent="WoodenPlateTutorial3" index="0"]
+position = Vector2(-1.88232, -88.338)
+scale = Vector2(0.394531, 0.389648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlateTutorial3/WoodenPlateTutorial1" index="0"]
+position = Vector2(4.77087, -46.2679)
+shape = SubResource("RectangleShape2D_n1gxy")
+
+[node name="WoodenPlateTutorial4" type="Sprite2D" parent="." index="4"]
+position = Vector2(567.25, -212)
+scale = Vector2(0.549805, 0.570313)
+texture = ExtResource("8_1tqhb")
+
+[node name="WoodenPlateTutorial3" type="StaticBody2D" parent="WoodenPlateTutorial4" index="0"]
+position = Vector2(8.63947, -103.452)
+scale = Vector2(0.390625, 0.397461)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenPlateTutorial4/WoodenPlateTutorial3" index="0"]
+position = Vector2(-13.9688, -4.41156)
+shape = SubResource("RectangleShape2D_wa5tc")
+
+[node name="Crumbs22" type="Node2D" parent="." index="5"]
+
+[node name="Crumbs" parent="Crumbs22" index="0" instance=ExtResource("2_utqyo")]
+position = Vector2(714, 66)
+
+[node name="Crumbs2" parent="Crumbs22" index="1" instance=ExtResource("2_utqyo")]
+position = Vector2(430, -617)
+
+[node name="Crumbs3" parent="Crumbs22" index="2" instance=ExtResource("2_utqyo")]
+position = Vector2(-303, 429)
+
+[node name="Crumbs4" parent="Crumbs22" index="3" instance=ExtResource("2_utqyo")]
+position = Vector2(211, -6)
+
+[node name="Crumbs5" parent="Crumbs22" index="4" instance=ExtResource("2_utqyo")]
+position = Vector2(-550, -246)
+
+[node name="Crumbs6" parent="Crumbs22" index="5" instance=ExtResource("2_utqyo")]
+position = Vector2(-260, 263)
+
+[node name="Crumbs7" parent="Crumbs22" index="6" instance=ExtResource("2_utqyo")]
+position = Vector2(-864, -51)
+
+[node name="Crumbs8" parent="Crumbs22" index="7" instance=ExtResource("2_utqyo")]
+position = Vector2(-191, -347)
+
+[node name="Crumbs9" parent="Crumbs22" index="8" instance=ExtResource("2_utqyo")]
+position = Vector2(189, 397)
+
+[node name="Crumbs10" parent="Crumbs22" index="9" instance=ExtResource("2_utqyo")]
+position = Vector2(654, 605)
+
+[node name="Crumbs11" parent="Crumbs22" index="10" instance=ExtResource("2_utqyo")]
+position = Vector2(-263, -64)
+
+[node name="Crumbs12" parent="Crumbs22" index="11" instance=ExtResource("2_utqyo")]
+position = Vector2(54, -596)
+
+[node name="Crumbs13" parent="Crumbs22" index="12" instance=ExtResource("2_utqyo")]
+position = Vector2(494, 412)
+
+[node name="Crumbs14" parent="Crumbs22" index="13" instance=ExtResource("2_utqyo")]
+position = Vector2(734, 198)
+
+[node name="Crumbs15" parent="Crumbs22" index="14" instance=ExtResource("2_utqyo")]
+position = Vector2(617, -249)
+
+[node name="Crumbs21" parent="Crumbs22" index="15" instance=ExtResource("2_utqyo")]
+position = Vector2(1888, -1384)
+scale = Vector2(9, 9)
+
+[node name="Crumbs16" parent="Crumbs22" index="16" instance=ExtResource("2_utqyo")]
+position = Vector2(-220, -240)
+
+[node name="Crumbs17" parent="Crumbs22" index="17" instance=ExtResource("2_utqyo")]
+position = Vector2(309, 372)
+
+[node name="Crumbs18" parent="Crumbs22" index="18" instance=ExtResource("2_utqyo")]
+position = Vector2(563, 218)
+
+[node name="Crumbs19" parent="Crumbs22" index="19" instance=ExtResource("2_utqyo")]
+position = Vector2(717, 354)
+
+[node name="Crumbs20" parent="Crumbs22" index="20" instance=ExtResource("2_utqyo")]
+position = Vector2(753, -345)
+
+[node name="Poison" parent="Crumbs22" index="21" instance=ExtResource("3_mbb0v")]
+position = Vector2(-642, -577)
+
+[node name="Poison2" parent="Crumbs22" index="22" instance=ExtResource("3_mbb0v")]
+position = Vector2(-668, -133)
+
 [node name="Crumbs" parent="Crumbs" index="0" instance=ExtResource("2_utqyo")]
-position = Vector2(530, -45)
+position = Vector2(623, 73)
 
 [node name="Crumbs2" parent="Crumbs" index="1" instance=ExtResource("2_utqyo")]
-position = Vector2(438, -98)
+position = Vector2(728, -605)
 
 [node name="Crumbs3" parent="Crumbs" index="2" instance=ExtResource("2_utqyo")]
-position = Vector2(274, -4)
+position = Vector2(-158, 293)
 
 [node name="Crumbs4" parent="Crumbs" index="3" instance=ExtResource("2_utqyo")]
 position = Vector2(211, -6)
 
 [node name="Crumbs5" parent="Crumbs" index="4" instance=ExtResource("2_utqyo")]
-position = Vector2(287, -59)
+position = Vector2(-579, -30)
 
 [node name="Crumbs6" parent="Crumbs" index="5" instance=ExtResource("2_utqyo")]
-position = Vector2(368, 6)
+position = Vector2(-457, 286)
 
 [node name="Crumbs7" parent="Crumbs" index="6" instance=ExtResource("2_utqyo")]
-position = Vector2(378, -74)
+position = Vector2(-602, -119)
 
 [node name="Crumbs8" parent="Crumbs" index="7" instance=ExtResource("2_utqyo")]
-position = Vector2(376, -142)
+position = Vector2(-391, -268)
 
 [node name="Crumbs9" parent="Crumbs" index="8" instance=ExtResource("2_utqyo")]
-position = Vector2(504, -132)
+position = Vector2(329, 269)
 
 [node name="Crumbs10" parent="Crumbs" index="9" instance=ExtResource("2_utqyo")]
-position = Vector2(598, -91)
+position = Vector2(654, 605)
 
 [node name="Crumbs11" parent="Crumbs" index="10" instance=ExtResource("2_utqyo")]
-position = Vector2(455, 4)
+position = Vector2(-420, 148)
 
 [node name="Crumbs12" parent="Crumbs" index="11" instance=ExtResource("2_utqyo")]
-position = Vector2(430, -55)
+position = Vector2(-195, -532)
 
 [node name="Crumbs13" parent="Crumbs" index="12" instance=ExtResource("2_utqyo")]
-position = Vector2(527, 57)
+position = Vector2(494, 412)
 
 [node name="Crumbs14" parent="Crumbs" index="13" instance=ExtResource("2_utqyo")]
-position = Vector2(646, -160)
+position = Vector2(734, 198)
 
 [node name="Crumbs15" parent="Crumbs" index="14" instance=ExtResource("2_utqyo")]
-position = Vector2(617, -249)
+position = Vector2(881, -128)
 
-[node name="Crumbs16" parent="Crumbs" index="15" instance=ExtResource("2_utqyo")]
-position = Vector2(661, -238)
+[node name="Crumbs21" parent="Crumbs" index="15" instance=ExtResource("2_utqyo")]
+position = Vector2(1888, -1384)
+scale = Vector2(9, 9)
 
-[node name="Crumbs17" parent="Crumbs" index="16" instance=ExtResource("2_utqyo")]
-position = Vector2(715, -62)
+[node name="Crumbs16" parent="Crumbs" index="16" instance=ExtResource("2_utqyo")]
+position = Vector2(125, -421)
 
-[node name="Crumbs18" parent="Crumbs" index="17" instance=ExtResource("2_utqyo")]
-position = Vector2(785, 19)
+[node name="Crumbs17" parent="Crumbs" index="17" instance=ExtResource("2_utqyo")]
+position = Vector2(478, 112)
 
-[node name="Crumbs19" parent="Crumbs" index="18" instance=ExtResource("2_utqyo")]
-position = Vector2(646, 9)
+[node name="Crumbs18" parent="Crumbs" index="18" instance=ExtResource("2_utqyo")]
+position = Vector2(563, 218)
 
-[node name="Crumbs20" parent="Crumbs" index="19" instance=ExtResource("2_utqyo")]
-position = Vector2(753, -345)
+[node name="Crumbs19" parent="Crumbs" index="19" instance=ExtResource("2_utqyo")]
+position = Vector2(310, 585)
 
+<<<<<<< HEAD
+[node name="Crumbs20" parent="Crumbs" index="20" instance=ExtResource("2_utqyo")]
+position = Vector2(449, -126)
+=======
 [node name="Poison" parent="Poison" index="0" instance=ExtResource("3_mbb0v")]
 position = Vector2(331, -177)
+>>>>>>> origin
 
-[node name="Apple" parent="Foods" index="0" instance=ExtResource("3_dl3ha")]
-position = Vector2(207, -219)
+[node name="Poisons" type="Control" parent="." index="7"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="cherry" parent="Foods" index="1" instance=ExtResource("4_1yreh")]
-position = Vector2(15, -193)
+[node name="Poison" parent="Poisons" index="0" instance=ExtResource("3_mbb0v")]
+position = Vector2(-95, -486)
+
+[node name="Poison2" parent="Poisons" index="1" instance=ExtResource("3_mbb0v")]
+position = Vector2(-248, 168)
+
+[node name="Poison3" parent="Poisons" index="2" instance=ExtResource("3_mbb0v")]
+position = Vector2(-529, -344)
+
+[node name="Poison4" parent="Poisons" index="3" instance=ExtResource("3_mbb0v")]
+position = Vector2(-582, 168)
+
+[node name="Poison5" parent="Poisons" index="4" instance=ExtResource("3_mbb0v")]
+position = Vector2(-217, 287)
+
+[node name="Poison6" parent="Poisons" index="5" instance=ExtResource("3_mbb0v")]
+position = Vector2(634, 150)
+
+[node name="Poison7" parent="Poisons" index="6" instance=ExtResource("3_mbb0v")]
+position = Vector2(495, -572)
+
+[node name="Poison8" parent="Poisons" index="7" instance=ExtResource("3_mbb0v")]
+position = Vector2(151, -371)
+
+[node name="Poison9" parent="Poisons" index="8" instance=ExtResource("3_mbb0v")]
+position = Vector2(-336, -154)
+
+[node name="Poison10" parent="Poisons" index="9" instance=ExtResource("3_mbb0v")]
+position = Vector2(605, 297)
+
+[node name="Poison11" parent="Poisons" index="10" instance=ExtResource("3_mbb0v")]
+position = Vector2(291, 461)
+
+[node name="Poison12" parent="Poisons" index="11" instance=ExtResource("3_mbb0v")]
+position = Vector2(-798, 297)
+
+[node name="Poison13" parent="Poisons" index="12" instance=ExtResource("3_mbb0v")]
+position = Vector2(722, -486)
+
+[node name="followers" parent="." index="8"]
+position = Vector2(318, -114)
+
+[node name="Foods" parent="." index="9"]
+position = Vector2(73, -16)
+
+[node name="Apple3" parent="Foods" index="0" instance=ExtResource("3_dl3ha")]
+position = Vector2(-568, -476)
+
+[node name="Apple2" parent="Foods" index="1" instance=ExtResource("3_dl3ha")]
+position = Vector2(499, -483)
+
+[node name="Apple" parent="Foods" index="2" instance=ExtResource("3_dl3ha")]
+position = Vector2(-621, 253)
+
+[node name="cherry6" parent="Foods" index="3" instance=ExtResource("4_1yreh")]
+position = Vector2(759, -421)
+rotation = 2.25496
+scale = Vector2(0.0625, 0.0625)
+
+[node name="cherry" parent="Foods" index="4" instance=ExtResource("4_1yreh")]
+position = Vector2(-727, 241)
 rotation = 1.12748
 
-[node name="cherry2" parent="Foods" index="2" instance=ExtResource("4_1yreh")]
-position = Vector2(-202, -225)
+[node name="cherry2" parent="Foods" index="5" instance=ExtResource("4_1yreh")]
+position = Vector2(614, -386)
 rotation = 0.523599
 
-[node name="cherry3" parent="Foods" index="3" instance=ExtResource("4_1yreh")]
-position = Vector2(-54, -135)
+[node name="cherry3" parent="Foods" index="6" instance=ExtResource("4_1yreh")]
+position = Vector2(-452, -424)
 rotation = -3.06131
 
-[node name="cherry4" parent="Foods" index="4" instance=ExtResource("4_1yreh")]
-position = Vector2(-89, -214)
+[node name="cherry4" parent="Foods" index="7" instance=ExtResource("4_1yreh")]
+position = Vector2(341, -502)
 rotation = -1.61094
 
-[node name="cherry5" parent="Foods" index="5" instance=ExtResource("4_1yreh")]
-position = Vector2(-151, -155)
+[node name="cherry4" parent="Foods/cherry4" index="5" instance=ExtResource("4_1yreh")]
+position = Vector2(-2092.69, -4111.3)
+rotation = -1.61094
+
+[node name="cherry5" parent="Foods" index="8" instance=ExtResource("4_1yreh")]
+position = Vector2(-669, -365)
 rotation = -0.483456
+
+[node name="player" parent="." index="10"]
+position = Vector2(318, -114)
 
 [node name="Camera2D2" parent="player" index="6"]
 zoom = Vector2(2, 2)
@@ -104,8 +320,19 @@ limit_top = -600
 limit_right = 1000
 limit_bottom = 600
 
+<<<<<<< HEAD
+[node name="eatingArea" parent="." index="11"]
+position = Vector2(318, -114)
+
+[node name="LeafParticles" parent="." index="13"]
+position = Vector2(2, -377)
+
+[node name="Mordida" parent="." index="14"]
+position = Vector2(318, -114)
+=======
 [node name="LeafParticles" parent="." index="9"]
 position = Vector2(2, -377)
 
 [node name="WinUi" parent="." index="16"]
 next_scene = "res://scenes/level/level1.tscn"
+>>>>>>> origin

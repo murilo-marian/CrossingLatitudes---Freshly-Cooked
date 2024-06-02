@@ -1,3 +1,18 @@
+<<<<<<< HEAD:scenes/level/UI.tscn
+[gd_scene load_steps=25 format=3 uid="uid://bbf4lw57nc7m2"]
+
+[ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_wqjso"]
+[ext_resource type="Texture2D" uid="uid://dm3yxvii235p7" path="res://graphics/hud/bar.png" id="1_yn47v"]
+[ext_resource type="Script" path="res://scenes/player/TimerLabel.gd" id="2_8q8hd"]
+[ext_resource type="Script" path="res://scenes/level/QueenMood.gd" id="3_bwtnu"]
+[ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="3_k7vl2"]
+[ext_resource type="Script" path="res://scenes/player/TimerCounter.gd" id="3_nfo5m"]
+[ext_resource type="Texture2D" uid="uid://djrohdtnbcw7j" path="res://graphics/hud/button.png" id="5_0nfw5"]
+[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_1gfan"]
+[ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy.png" id="5_hl3yi"]
+[ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="6_3k40y"]
+[ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="7_34l06"]
+=======
 [gd_scene load_steps=24 format=3 uid="uid://bbf4lw57nc7m2"]
 
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_q34su"]
@@ -10,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="7_dfrt5"]
 [ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="8_1mg2o"]
 [ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="9_1c5ox"]
+>>>>>>> origin:scenes/UI/UI.tscn
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk0ri"]
 bg_color = Color(1, 1, 1, 1)
@@ -119,7 +135,13 @@ animations = [{
 script = ExtResource("4_g3bfs")
 metadata/_edit_use_anchors_ = true
 
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(166.75, 58.25)
+scale = Vector2(1.29102, 1.12109)
+texture = ExtResource("1_yn47v")
+
 [node name="ColorRect" type="Panel" parent="."]
+visible = false
 offset_left = 12.0
 offset_top = 11.0
 offset_right = 62.0
@@ -128,10 +150,10 @@ scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxFlat_xk0ri")
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 24.0
-offset_top = 17.0
-offset_right = 154.0
-offset_bottom = 85.0
+offset_left = 131.0
+offset_top = 30.0
+offset_right = 261.0
+offset_bottom = 98.0
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("1_q34su")
@@ -144,38 +166,53 @@ metadata/_edit_use_anchors_ = true
 one_shot = true
 script = ExtResource("3_g83y5")
 
+[node name="Button" type="Sprite2D" parent="."]
+position = Vector2(1080, 57.625)
+scale = Vector2(2.32089, 2.01667)
+texture = ExtResource("5_0nfw5")
+
 [node name="FoodCounter" type="Label" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -290.0
-offset_top = 40.0
-offset_right = 37.0
-offset_bottom = 166.0
+offset_left = -145.0
+offset_top = 38.0
+offset_right = 84.0
+offset_bottom = 129.0
 grow_horizontal = 0
 size_flags_horizontal = 10
 size_flags_vertical = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
+<<<<<<< HEAD:scenes/level/UI.tscn
+theme_override_fonts/font = ExtResource("1_wqjso")
+theme_override_font_sizes/font_size = 40
+=======
 theme_override_fonts/font = ExtResource("1_q34su")
 theme_override_font_sizes/font_size = 80
+>>>>>>> origin:scenes/UI/UI.tscn
 text = "Food: 0"
 
 [node name="QueenMood" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 180.0
-offset_top = 10.0
-offset_right = 234.0
-offset_bottom = 64.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -589.0
+offset_top = -316.0
+offset_right = -550.0
+offset_bottom = -288.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2, 2)
 script = ExtResource("5_couci")
 
 [node name="happy" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
-scale = Vector2(1.34375, 1.43359)
 sprite_frames = SubResource("SpriteFrames_4ytiv")
 animation = &"happy"
 frame_progress = 0.761181
@@ -183,7 +220,6 @@ frame_progress = 0.761181
 [node name="uneasy" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
-scale = Vector2(1.36719, 1.4375)
 sprite_frames = SubResource("SpriteFrames_repaj")
 animation = &"uneasy"
 frame_progress = 0.66922
@@ -191,7 +227,6 @@ frame_progress = 0.66922
 [node name="bothered" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
-scale = Vector2(1.42187, 1.42188)
 sprite_frames = SubResource("SpriteFrames_41fit")
 animation = &"bothered"
 frame_progress = 0.0369753
@@ -199,16 +234,15 @@ frame_progress = 0.0369753
 [node name="angry" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
-scale = Vector2(1.375, 1.40625)
 sprite_frames = SubResource("SpriteFrames_qyf4c")
 animation = &"angry"
 frame_progress = 0.0927613
 
 [node name="QueenMood2" type="TextureRect" parent="."]
-offset_left = 180.0
-offset_top = 11.0
-offset_right = 234.0
-offset_bottom = 65.0
+offset_left = 1.0
+offset_top = 21.0
+offset_right = 41.0
+offset_bottom = 61.0
 scale = Vector2(2, 2)
 texture = ExtResource("9_1c5ox")
 
