@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cxwrw5aklu67v" path="res://graphics/object/food_kolac.png" id="2_c6rg6"]
 
 [node name="kolac" instance=ExtResource("1_awoiu")]
+food_value = 20
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_c6rg6")

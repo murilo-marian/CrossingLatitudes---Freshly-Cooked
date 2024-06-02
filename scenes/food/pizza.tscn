@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dpk0akp2gugjc" path="res://graphics/object/pizza.png" id="2_b36w6"]
 
 [node name="pizza" instance=ExtResource("1_g3bwe")]
+food_value = 20
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_b36w6")

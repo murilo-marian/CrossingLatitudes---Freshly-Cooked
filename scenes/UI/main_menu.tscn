@@ -1,14 +1,30 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2vm5f2ctm1ta"]
+[gd_scene load_steps=12 format=3 uid="uid://b2vm5f2ctm1ta"]
 
-[ext_resource type="Script" path="res://MainMenu.gd" id="1_0gwhm"]
+[ext_resource type="Script" path="res://scenes/UI/MainMenu.gd" id="1_0gwhm"]
 [ext_resource type="Theme" uid="uid://nwchhchjdad6" path="res://scenes/UI/main_menu.tres" id="2_6dale"]
 [ext_resource type="Texture2D" uid="uid://iow2griemam6" path="res://graphics/textures/grass.png" id="2_p1f2f"]
 [ext_resource type="Texture2D" uid="uid://dis4wuo52re5q" path="res://graphics/player/queen_ant_idle_animation.png" id="4_3q3bw"]
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="4_fxuvs"]
+[ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="6_3djix"]
 
 [sub_resource type="Theme" id="Theme_mawae"]
 
 [sub_resource type="Theme" id="Theme_gr5w7"]
+
+[sub_resource type="Animation" id="Animation_4eaem"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_hb5ep"]
 resource_name = "new_animation"
@@ -25,21 +41,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_4eaem"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ncajh"]
@@ -105,5 +106,10 @@ libraries = {
 "": SubResource("AnimationLibrary_ncajh")
 }
 autoplay = "new_animation"
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3djix")
+volume_db = -4.685
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
