@@ -8,6 +8,7 @@ radius = 92.0489
 
 [node name="Vihrkuula" instance=ExtResource("1_i7vjn")]
 scale = Vector2(0.15, 0.15)
+food_value = 2
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_nll25")

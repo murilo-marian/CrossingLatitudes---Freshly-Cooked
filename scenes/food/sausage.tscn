@@ -8,6 +8,7 @@ _data = [Vector2(0.233871, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="Sausage" instance=ExtResource("1_gtr31")]
+food_value = 15
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 polygon = PackedVector2Array(-61, -84, -55, -71, -33, -46, -21, -20, -19, 3, -22, 21, -34, 46, -59, 77, -62, 89, -62, 102, -57, 110, -47, 116, -26, 116, -13, 111, 0, 98, 17, 74, 24, 53, 31, 18, 32, -6, 28, -33, 21, -63, 6, -90, -12, -109, -26, -116, -46, -116, -55, -111, -62, -101)
