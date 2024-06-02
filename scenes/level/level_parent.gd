@@ -37,6 +37,7 @@ func spawn_follower():
 			follower.global_position = $player.global_position
 		
 func on_ant_circle(area):
+	print("circle")
 	if $followers.get_child_count() > 2:
 		var vertices: PackedVector2Array = PackedVector2Array()
 		vertices.append($player.global_position)
