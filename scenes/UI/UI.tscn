@@ -1,18 +1,18 @@
-[gd_scene load_steps=25 format=3 uid="uid://bbf4lw57nc7m2"]
+[gd_scene load_steps=26 format=3 uid="uid://bbf4lw57nc7m2"]
 
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_q34su"]
 [ext_resource type="Texture2D" uid="uid://dm3yxvii235p7" path="res://graphics/hud/bar.png" id="1_yn47v"]
 [ext_resource type="Script" path="res://scenes/UI/TimerLabel.gd" id="2_cwgiy"]
-[ext_resource type="Script" path="res://scenes/UI/QueenMood.gd" id="5_couci"]
-[ext_resource type="Script" path="res://scenes/UI/UI.gd" id="4_g3bfs"]
-[ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="3_k7vl2"]
 [ext_resource type="Script" path="res://scenes/UI/TimerCounter.gd" id="3_g83y5"]
+[ext_resource type="Script" path="res://scenes/UI/UI.gd" id="4_g3bfs"]
 [ext_resource type="Texture2D" uid="uid://djrohdtnbcw7j" path="res://graphics/hud/button.png" id="5_0nfw5"]
 [ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_bepyk"]
+[ext_resource type="Script" path="res://scenes/UI/QueenMood.gd" id="5_couci"]
 [ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy.png" id="6_fsssa"]
 [ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="7_dfrt5"]
 [ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="8_1mg2o"]
 [ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="9_1c5ox"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk0ri"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 2

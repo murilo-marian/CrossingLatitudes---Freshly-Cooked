@@ -15,7 +15,8 @@
 
 [node name="level_1" instance=ExtResource("1_mlga3")]
 
-[node name="Objects#Plate" parent="." index="0" instance=ExtResource("2_qriab")]
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(-196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 0, 1, 0, 65535, 1, 0, -65536, 1, 0, -1, 1, 0, -65537, 1, 0, -131073, 1, 0, -196609, 1, 0, -131072, 1, 0, -196608, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -196601, 1, 0, -131065, 1, 0, -65529, 1, 0, 7, 1, 0, 65543, 1, 0, 65544, 1, 0, 8, 1, 0, -65528, 1, 0, -131064, 1, 0, -196600, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131071, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 65545, 1, 0, 65546, 1, 0, 10, 1, 0, -65526, 1, 0, 9, 1, 0, 131081, 1, 0, 131082, 1, 0, 65547, 1, 0, 11, 1, 0, -65525, 1, 0, -131061, 1, 0, -131062, 1, 0, -196598, 1, 0, -196599, 1, 0, -131063, 1, 0, -65527, 1, 0, -262134, 1, 0, -327670, 1, 0, -327671, 1, 0, -262135, 1, 0, -327672, 1, 0, -327673, 1, 0, -327674, 1, 0, -327675, 1, 0, -327676, 1, 0, -327677, 1, 0, -327678, 1, 0, -327679, 1, 0, -327680, 1, 0, -262145, 1, 0, -262146, 1, 0, -196610, 1, 0, -131074, 1, 0, -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 131083, 1, 0, 196619, 1, 0, -196597, 1, 0, -262133, 1, 0, -327669, 1, 0, 262141, 1, 0, 196605, 1, 0, 131069, 1, 0, 65533, 1, 0, -3, 1, 0, -65539, 1, 0, -131075, 1, 0, -196611, 1, 0, -262147, 1, 0, -327683, 1, 0, -327682, 1, 0, -327681, 1, 0, -393216, 1, 0, -393215, 1, 0, -393214, 1, 0, -393213, 1, 0, -393212, 1, 0, -393211, 1, 0, -393210, 1, 0, -393209, 1, 0, -393208, 1, 0, -393207, 1, 0, -393206, 1, 0, -393205, 1, 0, -4, 1, 0, -65540, 1, 0, -131076, 1, 0, -262148, 1, 0, -327684, 1, 0, -196612, 1, 0, 65532, 1, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, -458741, 1, 0, -458742, 1, 0, -458743, 1, 0, -458744, 1, 0, -458745, 1, 0, -458746, 1, 0, -458747, 1, 0, -458748, 1, 0, -458749, 1, 0, -458750, 1, 0, -458751, 1, 0, -458752, 1, 0, -393217, 1, 0, -393218, 1, 0, -393219, 1, 0, -393220, 1, 0)
 
 [node name="Objects#Plate2" parent="." index="1" instance=ExtResource("2_qriab")]
 position = Vector2(1061, -556)
@@ -29,81 +30,10 @@ position = Vector2(1182, 63)
 [node name="Objects#Plate5" parent="." index="4" instance=ExtResource("2_qriab")]
 position = Vector2(680, -500)
 
-[node name="TileMap" parent="." index="5"]
-layer_0/tile_data = PackedInt32Array(-196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 0, 1, 0, 65535, 1, 0, -65536, 1, 0, -1, 1, 0, -65537, 1, 0, -131073, 1, 0, -196609, 1, 0, -131072, 1, 0, -196608, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -196601, 1, 0, -131065, 1, 0, -65529, 1, 0, 7, 1, 0, 65543, 1, 0, 65544, 1, 0, 8, 1, 0, -65528, 1, 0, -131064, 1, 0, -196600, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131071, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 65545, 1, 0, 65546, 1, 0, 10, 1, 0, -65526, 1, 0, 9, 1, 0, 131081, 1, 0, 131082, 1, 0, 65547, 1, 0, 11, 1, 0, -65525, 1, 0, -131061, 1, 0, -131062, 1, 0, -196598, 1, 0, -196599, 1, 0, -131063, 1, 0, -65527, 1, 0, -262134, 1, 0, -327670, 1, 0, -327671, 1, 0, -262135, 1, 0, -327672, 1, 0, -327673, 1, 0, -327674, 1, 0, -327675, 1, 0, -327676, 1, 0, -327677, 1, 0, -327678, 1, 0, -327679, 1, 0, -327680, 1, 0, -262145, 1, 0, -262146, 1, 0, -196610, 1, 0, -131074, 1, 0, -65538, 1, 0, -2, 1, 0, 65534, 1, 0, 131070, 1, 0, 196606, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 131083, 1, 0, 196619, 1, 0, -196597, 1, 0, -262133, 1, 0, -327669, 1, 0, 262141, 1, 0, 196605, 1, 0, 131069, 1, 0, 65533, 1, 0, -3, 1, 0, -65539, 1, 0, -131075, 1, 0, -196611, 1, 0, -262147, 1, 0, -327683, 1, 0, -327682, 1, 0, -327681, 1, 0, -393216, 1, 0, -393215, 1, 0, -393214, 1, 0, -393213, 1, 0, -393212, 1, 0, -393211, 1, 0, -393210, 1, 0, -393209, 1, 0, -393208, 1, 0, -393207, 1, 0, -393206, 1, 0, -393205, 1, 0, -4, 1, 0, -65540, 1, 0, -131076, 1, 0, -262148, 1, 0, -327684, 1, 0, -196612, 1, 0, 65532, 1, 0, 131068, 1, 0, 196604, 1, 0, 262140, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, -458741, 1, 0, -458742, 1, 0, -458743, 1, 0, -458744, 1, 0, -458745, 1, 0, -458746, 1, 0, -458747, 1, 0, -458748, 1, 0, -458749, 1, 0, -458750, 1, 0, -458751, 1, 0, -458752, 1, 0, -393217, 1, 0, -393218, 1, 0, -393219, 1, 0, -393220, 1, 0)
-
 [node name="Plate" parent="Objects" index="0" instance=ExtResource("2_qriab")]
 position = Vector2(832, -183)
 
-[node name="Poisons" type="Control" parent="." index="7"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 52.0
-offset_top = 284.0
-offset_right = 92.0
-offset_bottom = 324.0
-
-[node name="Poison" parent="Poisons" index="0" instance=ExtResource("12_tad0f")]
-position = Vector2(-732, -1049)
-
-[node name="Poison2" parent="Poisons" index="1" instance=ExtResource("12_tad0f")]
-position = Vector2(498, -516)
-
-[node name="Poison3" parent="Poisons" index="2" instance=ExtResource("12_tad0f")]
-position = Vector2(1, -1739)
-
-[node name="Poison4" parent="Poisons" index="3" instance=ExtResource("12_tad0f")]
-position = Vector2(2854, -840)
-
-[node name="Poison5" parent="Poisons" index="4" instance=ExtResource("12_tad0f")]
-position = Vector2(2392, -138)
-
-[node name="Poison6" parent="Poisons" index="5" instance=ExtResource("12_tad0f")]
-position = Vector2(313, 131)
-
-[node name="Poison7" parent="Poisons" index="6" instance=ExtResource("12_tad0f")]
-position = Vector2(151, 701)
-
-[node name="Poison8" parent="Poisons" index="7" instance=ExtResource("12_tad0f")]
-position = Vector2(1086, 749)
-
-[node name="Poison9" parent="Poisons" index="8" instance=ExtResource("12_tad0f")]
-position = Vector2(2098, 318)
-
-[node name="Poison10" parent="Poisons" index="9" instance=ExtResource("12_tad0f")]
-position = Vector2(742, -324)
-
-[node name="Poison11" parent="Poisons" index="10" instance=ExtResource("12_tad0f")]
-position = Vector2(833, -1528)
-
-[node name="Poison12" parent="Poisons" index="11" instance=ExtResource("12_tad0f")]
-position = Vector2(2092, -1096)
-
-[node name="Poison13" parent="Poisons" index="12" instance=ExtResource("12_tad0f")]
-position = Vector2(-421, 548)
-
-[node name="Poison14" parent="Poisons" index="13" instance=ExtResource("12_tad0f")]
-position = Vector2(1079, -11)
-
-[node name="Poison15" parent="Poisons" index="14" instance=ExtResource("12_tad0f")]
-position = Vector2(616, -914)
-
-[node name="Poison16" parent="Poisons" index="15" instance=ExtResource("12_tad0f")]
-position = Vector2(1164, -660)
-
-[node name="Poison17" parent="Poisons" index="16" instance=ExtResource("12_tad0f")]
-position = Vector2(1329, -181)
-
-[node name="Poison18" parent="Poisons" index="17" instance=ExtResource("12_tad0f")]
-position = Vector2(1003, -456)
-
-[node name="Poison19" parent="Poisons" index="18" instance=ExtResource("12_tad0f")]
-position = Vector2(-455, -1444)
-
-[node name="Poison20" parent="Poisons" index="19" instance=ExtResource("12_tad0f")]
-position = Vector2(-855, 59)
-
-[node name="Crumbs" parent="." index="8"]
+[node name="Crumbs" parent="." index="6"]
 modulate = Color(0.621524, 0.621524, 0.621524, 1)
 
 [node name="Crumbs2" parent="Crumbs" index="0" instance=ExtResource("3_7rdio")]
@@ -122,7 +52,7 @@ position = Vector2(395, -74)
 position = Vector2(561, -730)
 
 [node name="Crumbs7" parent="Crumbs" index="5" instance=ExtResource("3_7rdio")]
-position = Vector2(-419, -1025)
+position = Vector2(1259, -90)
 
 [node name="Crumbs8" parent="Crumbs" index="6" instance=ExtResource("3_7rdio")]
 position = Vector2(1670, -209)
@@ -140,7 +70,7 @@ position = Vector2(1041, -64)
 position = Vector2(646, -160)
 
 [node name="Crumbs15" parent="Crumbs" index="11" instance=ExtResource("3_7rdio")]
-position = Vector2(-161, -128)
+position = Vector2(460, 162)
 
 [node name="Crumbs16" parent="Crumbs" index="12" instance=ExtResource("3_7rdio")]
 position = Vector2(1377, -86)
@@ -155,79 +85,118 @@ position = Vector2(1260, -438)
 position = Vector2(753, -345)
 
 [node name="Crumbs21" parent="Crumbs" index="16" instance=ExtResource("3_7rdio")]
-position = Vector2(-758, -135)
+position = Vector2(733, 70)
 
 [node name="Crumbs22" parent="Crumbs" index="17" instance=ExtResource("3_7rdio")]
-position = Vector2(-732, 933)
+position = Vector2(564, -35)
 
 [node name="Crumbs23" parent="Crumbs" index="18" instance=ExtResource("3_7rdio")]
 position = Vector2(-449, 356)
 
-[node name="Crumbs24" parent="Crumbs" index="19" instance=ExtResource("3_7rdio")]
-position = Vector2(-160, 837)
+[node name="Crumbs25" parent="Crumbs" index="19" instance=ExtResource("3_7rdio")]
+position = Vector2(1655, -85)
 
-[node name="Crumbs25" parent="Crumbs" index="20" instance=ExtResource("3_7rdio")]
-position = Vector2(2435, 404)
+[node name="Crumbs26" parent="Crumbs" index="20" instance=ExtResource("3_7rdio")]
+position = Vector2(781, 200)
 
-[node name="Crumbs26" parent="Crumbs" index="21" instance=ExtResource("3_7rdio")]
-position = Vector2(673, 532)
+[node name="Crumbs27" parent="Crumbs" index="21" instance=ExtResource("3_7rdio")]
+position = Vector2(893, 117)
 
-[node name="Crumbs27" parent="Crumbs" index="22" instance=ExtResource("3_7rdio")]
-position = Vector2(683, 1061)
+[node name="Crumbs28" parent="Crumbs" index="22" instance=ExtResource("3_7rdio")]
+position = Vector2(1403, 160)
 
-[node name="Crumbs28" parent="Crumbs" index="23" instance=ExtResource("3_7rdio")]
-position = Vector2(1420, 724)
+[node name="Crumbs29" parent="Crumbs" index="23" instance=ExtResource("3_7rdio")]
+position = Vector2(1339, -699)
 
-[node name="Crumbs29" parent="Crumbs" index="24" instance=ExtResource("3_7rdio")]
-position = Vector2(1297, -1160)
+[node name="Crumbs30" parent="Crumbs" index="24" instance=ExtResource("3_7rdio")]
+position = Vector2(1586, -652)
 
-[node name="Crumbs30" parent="Crumbs" index="25" instance=ExtResource("3_7rdio")]
-position = Vector2(2264, -1048)
+[node name="Crumbs31" parent="Crumbs" index="25" instance=ExtResource("3_7rdio")]
+position = Vector2(503, -158)
 
-[node name="Crumbs31" parent="Crumbs" index="26" instance=ExtResource("3_7rdio")]
-position = Vector2(-322, -624)
-
-[node name="Crumbs32" parent="Crumbs" index="27" instance=ExtResource("3_7rdio")]
+[node name="Crumbs32" parent="Crumbs" index="26" instance=ExtResource("3_7rdio")]
 position = Vector2(-358, -1265)
 
-[node name="Crumbs33" parent="Crumbs" index="28" instance=ExtResource("3_7rdio")]
-position = Vector2(649, -1547)
+[node name="Crumbs33" parent="Crumbs" index="27" instance=ExtResource("3_7rdio")]
+position = Vector2(425, -681)
 
-[node name="Crumbs34" parent="Crumbs" index="29" instance=ExtResource("3_7rdio")]
-position = Vector2(787, -1013)
+[node name="Crumbs34" parent="Crumbs" index="28" instance=ExtResource("3_7rdio")]
+position = Vector2(904, -673)
 
-[node name="Crumbs35" parent="Crumbs" index="30" instance=ExtResource("3_7rdio")]
-position = Vector2(2777, -888)
+[node name="Crumbs35" parent="Crumbs" index="29" instance=ExtResource("3_7rdio")]
+position = Vector2(1612, -439)
 
-[node name="Crumbs36" parent="Crumbs" index="31" instance=ExtResource("3_7rdio")]
-position = Vector2(2807, -54)
+[node name="Crumbs36" parent="Crumbs" index="30" instance=ExtResource("3_7rdio")]
+position = Vector2(1520, -337)
 
-[node name="Crumbs37" parent="Crumbs" index="32" instance=ExtResource("3_7rdio")]
-position = Vector2(2028, -606)
+[node name="Crumbs37" parent="Crumbs" index="31" instance=ExtResource("3_7rdio")]
+position = Vector2(1677, -572)
 
-[node name="Crumbs38" parent="Crumbs" index="33" instance=ExtResource("3_7rdio")]
-position = Vector2(2399, -1421)
+[node name="Crumbs38" parent="Crumbs" index="32" instance=ExtResource("3_7rdio")]
+position = Vector2(1553, -566)
 
-[node name="Crumbs39" parent="Crumbs" index="34" instance=ExtResource("3_7rdio")]
-position = Vector2(1698, -1097)
+[node name="Crumbs39" parent="Crumbs" index="33" instance=ExtResource("3_7rdio")]
+position = Vector2(1256, -555)
 
-[node name="Crumbs40" parent="Crumbs" index="35" instance=ExtResource("3_7rdio")]
+[node name="Crumbs40" parent="Crumbs" index="34" instance=ExtResource("3_7rdio")]
 position = Vector2(220, -1044)
 
-[node name="Crumbs41" parent="Crumbs" index="36" instance=ExtResource("3_7rdio")]
-position = Vector2(2171, -52)
+[node name="Crumbs41" parent="Crumbs" index="35" instance=ExtResource("3_7rdio")]
+position = Vector2(1722, -328)
 
-[node name="Crumbs42" parent="Crumbs" index="37" instance=ExtResource("3_7rdio")]
-position = Vector2(1896, 743)
+[node name="Crumbs42" parent="Crumbs" index="36" instance=ExtResource("3_7rdio")]
+position = Vector2(1605, 180)
 
-[node name="Crumbs43" parent="Crumbs" index="38" instance=ExtResource("3_7rdio")]
+[node name="Crumbs43" parent="Crumbs" index="37" instance=ExtResource("3_7rdio")]
 position = Vector2(2249, 1180)
 
-[node name="Crumbs44" parent="Crumbs" index="39" instance=ExtResource("3_7rdio")]
+[node name="Crumbs44" parent="Crumbs" index="38" instance=ExtResource("3_7rdio")]
 position = Vector2(2915, 982)
 
-[node name="Crumbs45" parent="Crumbs" index="40" instance=ExtResource("3_7rdio")]
+[node name="Crumbs45" parent="Crumbs" index="39" instance=ExtResource("3_7rdio")]
 position = Vector2(1662, -1547)
+
+[node name="Poison" parent="Poison" index="0" instance=ExtResource("12_tad0f")]
+position = Vector2(688, -181)
+
+[node name="Poison2" parent="Poison" index="1" instance=ExtResource("12_tad0f")]
+position = Vector2(498, -516)
+
+[node name="Poison3" parent="Poison" index="2" instance=ExtResource("12_tad0f")]
+position = Vector2(353, -721)
+
+[node name="Poison6" parent="Poison" index="3" instance=ExtResource("12_tad0f")]
+position = Vector2(313, 131)
+
+[node name="Poison9" parent="Poison" index="4" instance=ExtResource("12_tad0f")]
+position = Vector2(1647, -199)
+
+[node name="Poison10" parent="Poison" index="5" instance=ExtResource("12_tad0f")]
+position = Vector2(742, -324)
+
+[node name="Poison11" parent="Poison" index="6" instance=ExtResource("12_tad0f")]
+position = Vector2(1171, -952)
+
+[node name="Poison14" parent="Poison" index="7" instance=ExtResource("12_tad0f")]
+position = Vector2(1079, -11)
+
+[node name="Poison15" parent="Poison" index="8" instance=ExtResource("12_tad0f")]
+position = Vector2(616, -914)
+
+[node name="Poison16" parent="Poison" index="9" instance=ExtResource("12_tad0f")]
+position = Vector2(1164, -660)
+
+[node name="Poison17" parent="Poison" index="10" instance=ExtResource("12_tad0f")]
+position = Vector2(1329, -181)
+
+[node name="Poison18" parent="Poison" index="11" instance=ExtResource("12_tad0f")]
+position = Vector2(1003, -456)
+
+[node name="Poison19" parent="Poison" index="12" instance=ExtResource("12_tad0f")]
+position = Vector2(836, -690)
+
+[node name="Poison20" parent="Poison" index="13" instance=ExtResource("12_tad0f")]
+position = Vector2(-855, 59)
 
 [node name="Apple" parent="Foods" index="0" instance=ExtResource("4_7cxbg")]
 position = Vector2(789, -150)
@@ -289,11 +258,15 @@ position = Vector2(1388, -533)
 [node name="kolac" parent="Foods" index="18" instance=ExtResource("11_4n088")]
 position = Vector2(1053, -310)
 
-[node name="player" parent="." index="12"]
+[node name="player" parent="." index="10"]
 position = Vector2(379, -268)
 
 [node name="Camera2D2" parent="player" index="6"]
 zoom = Vector2(2, 2)
+limit_left = -100
+limit_top = -1000
+limit_right = 2000
+limit_bottom = 500
 
-[node name="WinUi" parent="." index="22"]
+[node name="WinUi" parent="." index="20"]
 next_scene = "res://scenes/UI/winScreen.tscn"
