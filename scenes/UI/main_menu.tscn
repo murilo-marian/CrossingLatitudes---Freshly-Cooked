@@ -1,0 +1,109 @@
+[gd_scene load_steps=11 format=3 uid="uid://b2vm5f2ctm1ta"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_0gwhm"]
+[ext_resource type="Theme" uid="uid://nwchhchjdad6" path="res://scenes/UI/main_menu.tres" id="2_6dale"]
+[ext_resource type="Texture2D" uid="uid://iow2griemam6" path="res://graphics/textures/grass.png" id="2_p1f2f"]
+[ext_resource type="Texture2D" uid="uid://dis4wuo52re5q" path="res://graphics/player/queen_ant_idle_animation.png" id="4_3q3bw"]
+[ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="4_fxuvs"]
+
+[sub_resource type="Theme" id="Theme_mawae"]
+
+[sub_resource type="Theme" id="Theme_gr5w7"]
+
+[sub_resource type="Animation" id="Animation_hb5ep"]
+resource_name = "new_animation"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_4eaem"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncajh"]
+_data = {
+"RESET": SubResource("Animation_4eaem"),
+"new_animation": SubResource("Animation_hb5ep")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mawae")
+script = ExtResource("1_0gwhm")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(584, 322)
+scale = Vector2(4.75, 4.75)
+texture = ExtResource("2_p1f2f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 91.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -445.0
+offset_top = 94.0
+offset_right = -57.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gr5w7")
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme = ExtResource("2_6dale")
+theme_override_fonts/font = ExtResource("4_fxuvs")
+theme_override_font_sizes/font_size = 200
+text = "PLAY"
+flat = true
+
+[node name="Queen" type="Sprite2D" parent="."]
+position = Vector2(913, 272)
+rotation = -1.5708
+scale = Vector2(10, 10)
+texture = ExtResource("4_3q3bw")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Queen")
+libraries = {
+"": SubResource("AnimationLibrary_ncajh")
+}
+autoplay = "new_animation"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
