@@ -9,3 +9,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+
+func get_eaten():
+	$CPUParticles2D.emitting = true
+	$Timer.start()
+	
+func _on_timer_timeout():
+	queue_free()

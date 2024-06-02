@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://4fj47er771fo"]
+
+[ext_resource type="PackedScene" uid="uid://cds1loia75f7p" path="res://scenes/player/ant_parent.tscn" id="1_3m04o"]
+[ext_resource type="Script" path="res://scenes/player/follower.gd" id="1_dqj1n"]
+
+[node name="AntParent" instance=ExtResource("1_3m04o")]
+script = ExtResource("1_dqj1n")
+target_path = NodePath("")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(1, 0)
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(2, -1)
