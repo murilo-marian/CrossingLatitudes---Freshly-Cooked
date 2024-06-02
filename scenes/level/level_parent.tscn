@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjm4x3xxknjg0"]
+[gd_scene load_steps=14 format=3 uid="uid://bjm4x3xxknjg0"]
 
 [ext_resource type="Script" path="res://scenes/level/level_parent.gd" id="1_0xdte"]
 [ext_resource type="PackedScene" uid="uid://bq808svrkeft2" path="res://scenes/player/player.tscn" id="1_6xohy"]
 [ext_resource type="Texture2D" uid="uid://c0lhs42cqboks" path="res://graphics/texture/grass.png" id="3_6fapi"]
 [ext_resource type="Texture2D" uid="uid://dotys2n67joes" path="res://graphics/texture/blanket.png" id="3_wngas"]
-[ext_resource type="Texture2D" uid="uid://c2jnf2bpskap" path="res://graphics/texture/leaf_particle.png" id="5_k5gtl"]
-[ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/object/apple.tscn" id="2_ibjt2"]
 [ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="4_mca76"]
+[ext_resource type="Texture2D" uid="uid://c2jnf2bpskap" path="res://graphics/texture/leaf_particle.png" id="5_k5gtl"]
+[ext_resource type="AudioStream" uid="uid://c47kerx7753ir" path="res://sounds/Mordida-5-1.mp3" id="7_vmqb3"]
+[ext_resource type="AudioStream" uid="uid://vxpjd34kqtn2" path="res://sounds/Mordida-5.mp3" id="8_urlib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xy25"]
 texture = ExtResource("3_wngas")
@@ -27,6 +28,13 @@ sources/1 = SubResource("TileSetAtlasSource_8pf45")
 _data = [Vector2(0.120968, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.406593), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3qq88"]
+streams_count = 2
+stream_0/stream = ExtResource("7_vmqb3")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_urlib")
+stream_1/weight = 1.0
+
 [node name="LevelParent" type="Node2D"]
 script = ExtResource("1_0xdte")
 
@@ -43,17 +51,21 @@ format = 2
 [node name="player" parent="." instance=ExtResource("1_6xohy")]
 
 [node name="Camera2D2" type="Camera2D" parent="player"]
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
 
 [node name="eatingArea" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 2
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
+
 [node name="background music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mca76")
 volume_db = -4.685
 autoplay = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
 
 [node name="LeafParticles" type="CPUParticles2D" parent="."]
 position = Vector2(377, -267)
@@ -74,6 +86,9 @@ angle_max = 220.0
 scale_amount_min = 3.0
 scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_cy1sq")
+
+[node name="Mordida" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_3qq88")
 
 [connection signal="circleFormed" from="player" to="." method="_on_player_circle_formed"]
 [connection signal="crumbEntered" from="player" to="." method="_on_player_crumb_entered"]

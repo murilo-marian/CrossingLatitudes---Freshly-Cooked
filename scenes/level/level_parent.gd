@@ -37,7 +37,9 @@ func _on_player_circle_formed(area):
 
 func _on_eating_area_body_entered(body): #add points for food later
 	if body.has_method("get_eaten"):
+		$Mordida.play()
 		body.get_eaten()
+		
 
 func change_player():
 	if $followers.get_child_count() == 0: #TODO change later to game over screen and stuff
@@ -54,5 +56,10 @@ func _on_player_kill_ant():
 	change_player()
 	
 	
-func _on_player_crumb_entered(area): #add points for food later
-	area.queue_free()
+func _on_player_crumb_entered(area): 
+	var layer = area.get_collision_layer()
+	if layer == 4:
+		area.queue_free() #TODO crumb eaten behavior
+	elif layer == 32:
+		area.queue_free()
+		change_player()

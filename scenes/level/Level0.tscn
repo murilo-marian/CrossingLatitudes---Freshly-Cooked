@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqnxhk5cfrf6i"]
+[gd_scene load_steps=6 format=3 uid="uid://bqnxhk5cfrf6i"]
 
 [ext_resource type="PackedScene" uid="uid://bjm4x3xxknjg0" path="res://scenes/level/level_parent.tscn" id="1_ve6qt"]
 [ext_resource type="PackedScene" uid="uid://c1f5rtph8x5pl" path="res://scenes/food/crumbs.tscn" id="2_utqyo"]
 [ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/food/apple.tscn" id="3_dl3ha"]
+[ext_resource type="PackedScene" uid="uid://cnlnydapheqpv" path="res://scenes/food/poison.tscn" id="3_mbb0v"]
 [ext_resource type="PackedScene" uid="uid://c2pnaokoalxcw" path="res://scenes/food/cherry.tscn" id="4_1yreh"]
 
 [node name="Level0" instance=ExtResource("1_ve6qt")]
@@ -70,6 +71,9 @@ position = Vector2(646, 9)
 [node name="Crumbs20" parent="Crumbs" index="19" instance=ExtResource("2_utqyo")]
 position = Vector2(753, -345)
 
+[node name="Poison" parent="Crumbs" index="20" instance=ExtResource("3_mbb0v")]
+position = Vector2(100, -45)
+
 [node name="Apple" parent="Foods" index="0" instance=ExtResource("3_dl3ha")]
 position = Vector2(207, -219)
 
@@ -94,13 +98,11 @@ position = Vector2(-151, -155)
 rotation = -0.483456
 
 [node name="Camera2D2" parent="player" index="6"]
+zoom = Vector2(2, 2)
 limit_left = -1000
 limit_top = -600
 limit_right = 1000
 limit_bottom = 600
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
 
-[node name="LeafParticles" parent="." index="6"]
+[node name="LeafParticles" parent="." index="7"]
 position = Vector2(2, -377)

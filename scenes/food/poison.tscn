@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnlnydapheqpv"]
+
+[ext_resource type="Texture2D" uid="uid://bsab4gmfhpnar" path="res://graphics/object/chumbinho.png" id="1_o7f3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxywj"]
+size = Vector2(34, 12)
+
+[node name="Poison" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pxywj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o7f3k")
