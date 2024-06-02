@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c0lhs42cqboks" path="res://graphics/texture/grass.png" id="3_6fapi"]
 [ext_resource type="Texture2D" uid="uid://dotys2n67joes" path="res://graphics/texture/blanket.png" id="3_wngas"]
 [ext_resource type="Texture2D" uid="uid://c2jnf2bpskap" path="res://graphics/texture/leaf_particle.png" id="5_k5gtl"]
+[ext_resource type="PackedScene" uid="uid://b0ycdi6x5pb2q" path="res://scenes/object/apple.tscn" id="2_ibjt2"]
+[ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="4_mca76"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xy25"]
 texture = ExtResource("3_wngas")
@@ -45,6 +47,11 @@ format = 2
 [node name="eatingArea" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 2
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mca76")
+volume_db = -4.685
+autoplay = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="eatingArea"]
 
