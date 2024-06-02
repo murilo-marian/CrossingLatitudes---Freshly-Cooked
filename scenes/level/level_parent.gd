@@ -1,6 +1,7 @@
 extends Node2D
 var follower_scene = preload("res://scenes/player/follower.tscn")
 var food = 0
+var running = true
 
 func _physics_process(_delta):
 	if get_node_or_null("player") != null:
@@ -9,6 +10,14 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 		
+	
+	if $Foods.get_child_count() <= 1 and running:
+		$"background music".playing = false
+		$WinMusic.play()
+		$UI.visible = false
+		$WinUi.visible = true
+		running = false
+	
 func _on_player_spawn_ant():
 	spawn_follower()
 	
@@ -49,12 +58,6 @@ func _on_eating_area_body_entered(body): #add points for food later
 		$UI/FoodCounter.text = "Food: " + str(food)
 		$Mordida.play()
 		body.get_eaten()
-		print($Foods.get_child_count())
-		if $Foods.get_child_count() == 1:
-			$"background music".playing = false
-			$WinMusic.play()
-			$UI.visible = false
-			$WinUi.visible = true
 		
 
 func change_player():

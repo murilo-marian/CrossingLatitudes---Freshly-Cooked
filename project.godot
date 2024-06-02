@@ -15,12 +15,13 @@ run/main_scene="res://scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[dotnet]
-
-project/assembly_name="CrossingLatitudes"
 [display]
 
 window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="CrossingLatitudes"
 
 [input]
 

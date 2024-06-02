@@ -160,3 +160,6 @@ position = Vector2(379, -268)
 
 [node name="Camera2D2" parent="player" index="6"]
 zoom = Vector2(2, 2)
+
+[node name="WinUi" parent="." index="16"]
+next_scene = "res://scenes/UI/winScreen.tscn"

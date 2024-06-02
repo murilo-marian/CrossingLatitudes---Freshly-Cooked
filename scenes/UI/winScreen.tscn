@@ -1,0 +1,208 @@
+[gd_scene load_steps=14 format=3 uid="uid://bm4rxpunecqkc"]
+
+[ext_resource type="Script" path="res://scenes/UI/winScreen.gd" id="1_8yj08"]
+[ext_resource type="Texture2D" uid="uid://dotys2n67joes" path="res://graphics/texture/blanket.png" id="1_voang"]
+[ext_resource type="Texture2D" uid="uid://dis4wuo52re5q" path="res://graphics/player/queen_ant_idle_animation.png" id="2_pglq0"]
+[ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="3_170qf"]
+[ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="4_f0ie5"]
+[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_ri2ld"]
+[ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="6_e30t3"]
+
+[sub_resource type="Animation" id="Animation_4eaem"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_hb5ep"]
+resource_name = "new_animation"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncajh"]
+_data = {
+"RESET": SubResource("Animation_4eaem"),
+"new_animation": SubResource("Animation_hb5ep")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wgbx"]
+atlas = ExtResource("5_ri2ld")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcsb1"]
+atlas = ExtResource("5_ri2ld")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0b1t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wgbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcsb1")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 2.0
+}]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8yj08")
+
+[node name="towel" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="towel"]
+position = Vector2(125, 125)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D2" type="Sprite2D" parent="towel"]
+position = Vector2(889, 125)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D3" type="Sprite2D" parent="towel"]
+position = Vector2(635, 125)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D4" type="Sprite2D" parent="towel"]
+position = Vector2(380, 125)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D5" type="Sprite2D" parent="towel"]
+position = Vector2(1144, 125)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D6" type="Sprite2D" parent="towel"]
+position = Vector2(125, 381)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D7" type="Sprite2D" parent="towel"]
+position = Vector2(889, 381)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D8" type="Sprite2D" parent="towel"]
+position = Vector2(635, 381)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D9" type="Sprite2D" parent="towel"]
+position = Vector2(380, 381)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D10" type="Sprite2D" parent="towel"]
+position = Vector2(1144, 381)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D11" type="Sprite2D" parent="towel"]
+position = Vector2(125, 625)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D12" type="Sprite2D" parent="towel"]
+position = Vector2(889, 625)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D13" type="Sprite2D" parent="towel"]
+position = Vector2(635, 625)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D14" type="Sprite2D" parent="towel"]
+position = Vector2(380, 625)
+texture = ExtResource("1_voang")
+
+[node name="Sprite2D15" type="Sprite2D" parent="towel"]
+position = Vector2(1144, 625)
+texture = ExtResource("1_voang")
+
+[node name="Queen" type="Sprite2D" parent="."]
+position = Vector2(134, 286)
+rotation = 1.5708
+scale = Vector2(10, 10)
+texture = ExtResource("2_pglq0")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Queen")
+libraries = {
+"": SubResource("AnimationLibrary_ncajh")
+}
+autoplay = "new_animation"
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_170qf")
+volume_db = -4.685
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -422.0
+offset_top = 179.0
+offset_right = -28.0
+offset_bottom = 289.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_f0ie5")
+theme_override_font_sizes/font_size = 90
+text = "Main Menu"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
+offset_left = -162.0
+offset_top = -371.0
+offset_right = 975.0
+offset_bottom = -101.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("4_f0ie5")
+theme_override_font_sizes/normal_font_size = 120
+text = "The Queen
+ is Happy"
+fit_content = true
+
+[node name="happy" type="AnimatedSprite2D" parent="."]
+position = Vector2(552, 488)
+scale = Vector2(5, 5.335)
+sprite_frames = SubResource("SpriteFrames_i0b1t")
+animation = &"happy"
+autoplay = "happy"
+
+[node name="QueenMood2" type="TextureRect" parent="."]
+offset_left = 458.0
+offset_top = 404.0
+offset_right = 512.0
+offset_bottom = 458.0
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("6_e30t3")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
