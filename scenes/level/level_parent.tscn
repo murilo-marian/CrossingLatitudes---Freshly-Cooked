@@ -8,11 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://c2jnf2bpskap" path="res://graphics/texture/leaf_particle.png" id="5_k5gtl"]
 [ext_resource type="AudioStream" uid="uid://c47kerx7753ir" path="res://sounds/Mordida-5-1.mp3" id="7_vmqb3"]
 [ext_resource type="AudioStream" uid="uid://vxpjd34kqtn2" path="res://sounds/Mordida-5.mp3" id="8_urlib"]
-[ext_resource type="PackedScene" path="res://scenes/UI/UI.tscn" id="9_o2av7"]
-[ext_resource type="AudioStream" path="res://sounds/game_loss.wav" id="10_ni8gf"]
-[ext_resource type="AudioStream" path="res://sounds/game_win.wav" id="11_p5xdi"]
-[ext_resource type="PackedScene" path="res://scenes/UI/LoseUI.tscn" id="12_x1ljb"]
-[ext_resource type="PackedScene" path="res://scenes/UI/WinUI.tscn" id="13_xyvgi"]
+[ext_resource type="PackedScene" uid="uid://bbf4lw57nc7m2" path="res://scenes/UI/UI.tscn" id="9_o2av7"]
+[ext_resource type="AudioStream" uid="uid://dsdpaan02q12q" path="res://sounds/game_loss.wav" id="10_ni8gf"]
+[ext_resource type="AudioStream" uid="uid://c1ictrxtsm7vc" path="res://sounds/game_win.wav" id="11_p5xdi"]
+[ext_resource type="PackedScene" uid="uid://b4ijcu5t6gpbk" path="res://scenes/UI/LoseUI.tscn" id="12_x1ljb"]
+[ext_resource type="PackedScene" uid="uid://b2dbagccncbrb" path="res://scenes/UI/WinUI.tscn" id="13_xyvgi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xy25"]
 texture = ExtResource("3_wngas")
