@@ -7,6 +7,11 @@ func _ready():
 	$angry.stop()
 	$"../TimerLabel".modulate = Color.DARK_GREEN
 	$happy.visible = true
+	if Global.colorblind:
+		$happy.animation = "happy_cb"
+		$uneasy.animation = "uneasy_cb"
+		$bothered.animation = "bothered_cb"
+		$angry.animation = "angry_cb"
 	$happy.play()
 
 

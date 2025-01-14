@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dis4wuo52re5q" path="res://graphics/player/queen_ant_idle_animation.png" id="2_pglq0"]
 [ext_resource type="AudioStream" uid="uid://dulpkh16ev0xu" path="res://sounds/soundtrack.wav" id="3_170qf"]
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="4_f0ie5"]
-[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_ri2ld"]
+[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy_cb.png" id="5_ri2ld"]
 [ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="6_e30t3"]
 
 [sub_resource type="Animation" id="Animation_4eaem"]

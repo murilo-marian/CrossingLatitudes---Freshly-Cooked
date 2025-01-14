@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2vm5f2ctm1ta"]
+[gd_scene load_steps=13 format=3 uid="uid://b2vm5f2ctm1ta"]
 
 [ext_resource type="Script" path="res://scenes/UI/MainMenu.gd" id="1_0gwhm"]
 [ext_resource type="Theme" uid="uid://nwchhchjdad6" path="res://scenes/UI/main_menu.tres" id="2_6dale"]
@@ -10,6 +10,9 @@
 [sub_resource type="Theme" id="Theme_mawae"]
 
 [sub_resource type="Theme" id="Theme_gr5w7"]
+
+[sub_resource type="Theme" id="Theme_mibox"]
+default_font_size = 34
 
 [sub_resource type="Animation" id="Animation_4eaem"]
 length = 0.001
@@ -92,6 +95,12 @@ theme_override_fonts/font = ExtResource("4_fxuvs")
 theme_override_font_sizes/font_size = 126
 text = "PLAY"
 flat = true
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_mibox")
+theme_override_fonts/font = ExtResource("4_fxuvs")
+text = "Colorblind Mode"
 
 [node name="Queen" type="Sprite2D" parent="."]
 position = Vector2(796, 441)

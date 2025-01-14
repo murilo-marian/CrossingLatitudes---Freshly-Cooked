@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bbf4lw57nc7m2"]
+[gd_scene load_steps=35 format=3 uid="uid://bbf4lw57nc7m2"]
 
 [ext_resource type="FontFile" uid="uid://ccf8c8ndbau01" path="res://scenes/UI/ANDYB.TTF" id="1_q34su"]
 [ext_resource type="Texture2D" uid="uid://dm3yxvii235p7" path="res://graphics/hud/bar.png" id="1_yn47v"]
@@ -6,12 +6,13 @@
 [ext_resource type="Script" path="res://scenes/UI/TimerCounter.gd" id="3_g83y5"]
 [ext_resource type="Script" path="res://scenes/UI/UI.gd" id="4_g3bfs"]
 [ext_resource type="Texture2D" uid="uid://djrohdtnbcw7j" path="res://graphics/hud/button.png" id="5_0nfw5"]
-[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="5_bepyk"]
 [ext_resource type="Script" path="res://scenes/UI/QueenMood.gd" id="5_couci"]
-[ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy.png" id="6_fsssa"]
-[ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered.png" id="7_dfrt5"]
-[ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry.png" id="8_1mg2o"]
+[ext_resource type="Texture2D" uid="uid://bfri4voqyt7w4" path="res://graphics/hud/queen's mood/queen_mood_uneasy_cb.png" id="6_fsssa"]
+[ext_resource type="Texture2D" uid="uid://b4l5n3j631lmf" path="res://graphics/hud/queen's mood/queen_mood_bothered_cb.png" id="7_dfrt5"]
+[ext_resource type="Texture2D" uid="uid://2hha8htaj5rg" path="res://graphics/hud/queen's mood/queen_mood_angry_cb.png" id="8_1mg2o"]
+[ext_resource type="Texture2D" uid="uid://dutuiqovx44ht" path="res://graphics/hud/queen's mood/queen_mood_happy.png" id="8_uxypb"]
 [ext_resource type="Texture2D" uid="uid://ce26tah3j1pux" path="res://graphics/hud/frame.png" id="9_1c5ox"]
+[ext_resource type="Texture2D" uid="uid://bwxlprg5ej5nh" path="res://graphics/hud/queen's mood/queen_mood_happy_cb.png" id="9_mil3b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xk0ri"]
 bg_color = Color(1, 1, 1, 1)
@@ -29,33 +30,60 @@ corner_detail = 2
 shadow_color = Color(0.0350165, 0.0679927, 0.0656997, 0.6)
 anti_aliasing_size = 1.241
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3wgbx"]
-atlas = ExtResource("5_bepyk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbhnb"]
+atlas = ExtResource("8_uxypb")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcsb1"]
-atlas = ExtResource("5_bepyk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xktsm"]
+atlas = ExtResource("8_uxypb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sncq3"]
+atlas = ExtResource("9_mil3b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgegx"]
+atlas = ExtResource("9_mil3b")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ytiv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3wgbx")
+"texture": SubResource("AtlasTexture_qbhnb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vcsb1")
+"texture": SubResource("AtlasTexture_xktsm")
 }],
 "loop": true,
 "name": &"happy",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sncq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgegx")
+}],
+"loop": true,
+"name": &"happy_cb",
+"speed": 2.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ao8c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5wll"]
 atlas = ExtResource("6_fsssa")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t1j7n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgs0w"]
+atlas = ExtResource("6_fsssa")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msfnd"]
+atlas = ExtResource("6_fsssa")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es0qe"]
 atlas = ExtResource("6_fsssa")
 region = Rect2(32, 0, 32, 32)
 
@@ -63,21 +91,40 @@ region = Rect2(32, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4ao8c")
+"texture": SubResource("AtlasTexture_t5wll")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t1j7n")
+"texture": SubResource("AtlasTexture_tgs0w")
 }],
 "loop": true,
 "name": &"uneasy",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msfnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es0qe")
+}],
+"loop": true,
+"name": &"uneasy_cb",
+"speed": 4.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qc2hs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykhym"]
 atlas = ExtResource("7_dfrt5")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8dllx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mupcl"]
+atlas = ExtResource("7_dfrt5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7l8x"]
+atlas = ExtResource("7_dfrt5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jki43"]
 atlas = ExtResource("7_dfrt5")
 region = Rect2(32, 0, 32, 32)
 
@@ -85,21 +132,40 @@ region = Rect2(32, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qc2hs")
+"texture": SubResource("AtlasTexture_ykhym")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8dllx")
+"texture": SubResource("AtlasTexture_mupcl")
 }],
 "loop": true,
 "name": &"bothered",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7l8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jki43")
+}],
+"loop": true,
+"name": &"bothered_cb",
+"speed": 7.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l2nrg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i11e3"]
 atlas = ExtResource("8_1mg2o")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fyx3c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_45cc5"]
+atlas = ExtResource("8_1mg2o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iljap"]
+atlas = ExtResource("8_1mg2o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86olc"]
 atlas = ExtResource("8_1mg2o")
 region = Rect2(32, 0, 32, 32)
 
@@ -107,13 +173,24 @@ region = Rect2(32, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l2nrg")
+"texture": SubResource("AtlasTexture_i11e3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fyx3c")
+"texture": SubResource("AtlasTexture_45cc5")
 }],
 "loop": true,
 "name": &"angry",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iljap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86olc")
+}],
+"loop": true,
+"name": &"angry_cb",
 "speed": 10.0
 }]
 
@@ -196,28 +273,25 @@ visible = false
 position = Vector2(27, 26)
 sprite_frames = SubResource("SpriteFrames_4ytiv")
 animation = &"happy"
-frame_progress = 0.761181
+frame_progress = 0.914419
 
 [node name="uneasy" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
 sprite_frames = SubResource("SpriteFrames_repaj")
 animation = &"uneasy"
-frame_progress = 0.66922
 
 [node name="bothered" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
 sprite_frames = SubResource("SpriteFrames_41fit")
-animation = &"bothered"
-frame_progress = 0.0369753
+animation = &"bothered_cb"
 
 [node name="angry" type="AnimatedSprite2D" parent="QueenMood"]
 visible = false
 position = Vector2(27, 26)
 sprite_frames = SubResource("SpriteFrames_qyf4c")
 animation = &"angry"
-frame_progress = 0.0927613
 
 [node name="QueenMood2" type="TextureRect" parent="."]
 offset_left = 1.0
